@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Insights From BioData provides RNA-seq, alternative splicing, pathway analysis, publication-ready visualization, and reproducible bioinformatics workflow support.">
+  <title>Insights From BioData | RNA-seq & Bioinformatics Workflows</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Insights From BioData home">
+      <span class="brand-mark">IFB</span>
+      <span>Insights From BioData</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Proof</a>
+      <a href="#workflow">Process</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Transcriptomics, splicing, visualization</p>
+        <h1>Bioinformatics workflows that turn RNA-seq data into clear research outputs.</h1>
+        <p class="lead">
+          Insights From BioData supports academic and wet-lab teams with reproducible
+          RNA-seq analysis, alternative splicing workflows, pathway-level interpretation,
+          and publication-ready figures.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contact">Discuss a dataset</a>
+          <a class="button secondary" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">View GitHub proof</a>
+        </div>
+        <dl class="hero-stats" aria-label="Service highlights">
+          <div>
+            <dt>DESeq2</dt>
+            <dd>DEG tables, PCA, heatmaps, volcano plots</dd>
+          </div>
+          <div>
+            <dt>rMATS</dt>
+            <dd>splicing events and sashimi-style review</dd>
+          </div>
+          <div>
+            <dt>R/Python</dt>
+            <dd>clean scripts, reports, and automation</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="analysis-console" aria-label="RNA-seq analysis preview">
+        <div class="console-top">
+          <span>workflow/run_analysis.R</span>
+          <span class="status-dot">reproducible</span>
+        </div>
+        <div class="console-body">
+          <div class="code-lines" aria-hidden="true">
+            <span>01</span><code>import counts + metadata</code>
+            <span>02</span><code>filter low-count genes</code>
+            <span>03</span><code>fit design ~ cell + condition</code>
+            <span>04</span><code>shrink log2 fold changes</code>
+            <span>05</span><code>export plots + report</code>
+          </div>
+          <div class="plot-board" aria-hidden="true">
+            <div class="mini-pca">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="mini-heatmap">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="console-metrics">
+          <span><strong>RNA-seq</strong> DEG workflow</span>
+          <span><strong>Splicing</strong> rMATS/SUPPA2</span>
+          <span><strong>Reports</strong> figures + tables</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-band">
+      <div class="intro-text">
+        <p class="eyebrow">Positioning</p>
+        <h2>For researchers who need analysis outputs they can inspect, explain, and reuse.</h2>
+      </div>
+      <p>
+        The service focus is deliberately narrow: transcriptomics, alternative splicing,
+        scientific visualization, pathway summaries, and small automation tools for wet-lab
+        data handling. The goal is clean delivery, not overpromising.
+      </p>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Core services</p>
+        <h2>Analysis packages shaped around real portfolio work.</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card featured">
+          <span class="card-tag">Primary</span>
+          <h3>RNA-seq Differential Expression</h3>
+          <p>DESeq2-style workflows with QC summaries, filtered count matrices, normalized counts, DEG tables, PCA, heatmaps, volcano plots, and concise reports.</p>
+        </article>
+        <article class="service-card">
+          <span class="card-tag">Splicing</span>
+          <h3>Alternative Splicing Review</h3>
+          <p>rMATS/SUPPA2-oriented workflow notes, exon skipping and junction-level summaries, event filtering, and sashimi plot preparation for selected genes.</p>
+        </article>
+        <article class="service-card">
+          <span class="card-tag">Figures</span>
+          <h3>Publication-Ready Visuals</h3>
+          <p>PCA, sample-distance heatmaps, DEG heatmaps, volcano plots, pathway plots, expression summaries, and clean figure exports for manuscript workflows.</p>
+        </article>
+        <article class="service-card">
+          <span class="card-tag">Pathways</span>
+          <h3>Functional Interpretation</h3>
+          <p>GSEA and enrichment-oriented summaries that translate ranked gene lists or DEG sets into readable pathway-level research notes.</p>
+        </article>
+        <article class="service-card">
+          <span class="card-tag">Scripts</span>
+          <h3>Python/Bash Automation</h3>
+          <p>FASTA parsing, motif search, table cleaning, file organization, batch processing, and small reproducible helpers for repetitive lab-side tasks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="section-heading">
+        <p class="eyebrow">Proof of work</p>
+        <h2>Portfolio signals behind the service offer.</h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-card wide">
+          <div>
+            <span class="card-tag">R / DESeq2</span>
+            <h3>RNA-seq Workflow</h3>
+            <p>End-to-end DEG workflow with count data, metadata, QC, DESeq2 analysis, PCA, heatmaps, volcano plot, result tables, and a short interpretation report.</p>
+          </div>
+          <a href="https://github.com/Bioinformatikci/rna-seq-workflow" target="_blank" rel="noreferrer">Open repository</a>
+        </article>
+        <article class="work-card">
+          <span class="card-tag">STAR / rMATS</span>
+          <h3>Alternative Splicing Notes</h3>
+          <p>Workflow design around RNA-seq splicing analysis, event review, and rmats2sashimiplot-style visualization.</p>
+        </article>
+        <article class="work-card">
+          <span class="card-tag">Python / MATLAB</span>
+          <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
+          <p>Curated Alzheimer/control workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
+          <a href="https://github.com/Bioinformatikci/gemsplice-humangem-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
+        </article>
+        <article class="work-card">
+          <span class="card-tag">Python / Shiny</span>
+          <h3>Bioinformatics Portfolio Projects</h3>
+          <p>Sequence alignment, FASTA utilities, motif search, volcano plotting, variant summaries, and interactive R/Shiny exploration examples.</p>
+          <a href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects" target="_blank" rel="noreferrer">Open repository</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">Process</p>
+        <h2>A simple delivery flow for freelance research support.</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span>01</span>
+          <h3>Scope the dataset</h3>
+          <p>Clarify organism, sample groups, metadata, contrast, desired figures, and what data can be shared safely.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Run the workflow</h3>
+          <p>Analyze with transparent scripts, named outputs, quality checks, and checkpoints that make the result traceable.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Deliver clean files</h3>
+          <p>Provide tables, plots, scripts, and a short report that explains what was done and what the results show.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="stack section" id="stack">
+      <div>
+        <p class="eyebrow">Technical stack</p>
+        <h2>Tools selected for reproducible transcriptomics work.</h2>
+      </div>
+      <div class="stack-cloud" aria-label="Technical tools">
+        <span>R</span>
+        <span>Python</span>
+        <span>Bash</span>
+        <span>DESeq2</span>
+        <span>Salmon</span>
+        <span>STAR</span>
+        <span>rMATS</span>
+        <span>SUPPA2</span>
+        <span>ggplot2</span>
+        <span>pheatmap</span>
+        <span>pandas</span>
+        <span>NumPy</span>
+        <span>SciPy</span>
+        <span>Shiny</span>
+        <span>Git</span>
+        <span>Linux</span>
+      </div>
+    </section>
+
+    <section class="handoff section" id="handoff">
+      <div class="section-heading">
+        <p class="eyebrow">Project handoff</p>
+        <h2>What makes a dataset ready for analysis.</h2>
+      </div>
+      <div class="handoff-grid">
+        <article>
+          <h3>Minimum inputs</h3>
+          <ul>
+            <li>Raw count matrix or accepted quantification outputs</li>
+            <li>Sample metadata with groups, batches, and contrasts</li>
+            <li>Organism, genome/reference version, and gene annotation notes</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Useful context</h3>
+          <ul>
+            <li>Target genes, pathways, or splicing events of interest</li>
+            <li>Required figure formats for thesis, report, or manuscript use</li>
+            <li>Any previous scripts, tables, or analysis decisions to preserve</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Safer sharing</h3>
+          <ul>
+            <li>Anonymized or public datasets are preferred for first projects</li>
+            <li>Only share data you are allowed to transfer for analysis</li>
+            <li>Clinical interpretation and patient-specific advice are excluded</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="notice">
+      <h2>Research use first</h2>
+      <p>
+        Services are positioned for research support, data analysis, visualization, and reproducible reporting.
+        Clinical diagnosis, treatment decisions, or patient-specific medical interpretation are outside the scope.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div>
+        <p class="eyebrow">Start small, communicate clearly</p>
+        <h2>Ready to discuss a dataset?</h2>
+        <p>
+          Share the project goal, organism, data type, sample groups, expected outputs,
+          and whether you need figures, tables, scripts, or a short report. Initial projects
+          can be coordinated through trusted freelance platforms or a structured project brief.
+        </p>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:burakkeskinin@gmail.com?subject=RNA-seq%20analysis%20inquiry">Email project brief</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/burak-k-42709a121/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+        <a class="button secondary" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">View GitHub profile</a>
+        <a class="button secondary" href="#handoff">Check project inputs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Insights From BioData</span>
+    <span>RNA-seq, splicing, visualization, and workflow automation.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

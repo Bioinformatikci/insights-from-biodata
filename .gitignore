@@ -1,0 +1,7 @@
+*_desktop.png
+*_mobile.png
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
