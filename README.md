@@ -4,7 +4,7 @@ Single-page portfolio site for RNA-seq, alternative splicing, pathway analysis, 
 
 ## Live Link
 
-Expected GitHub Pages URL after Pages is enabled for the repository:
+Live GitHub Pages site:
 
 ```text
 https://bioinformatikci.github.io/insights-from-biodata/
@@ -17,11 +17,23 @@ https://bioinformatikci.github.io/insights-from-biodata/
 ├── index.html
 ├── styles.css
 ├── script.js
-├── favicon.ico
-├── favicon.svg
+├── assets/
+│   ├── sample-portfolio-report.pdf
+│   ├── rna-seq-pca.png
+│   ├── rna-seq-volcano.png
+│   ├── rna-seq-sample-distance-heatmap.png
+│   ├── rna-seq-top-deg-heatmap.png
+│   └── pathway and objective figure assets
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
+
+## Included Assets
+
+- Sample portfolio report PDF.
+- RNA-seq PCA, volcano, and heatmap figures.
+- Pathway and objective-review figures used in the portfolio gallery.
 
 ## Local Preview
 
