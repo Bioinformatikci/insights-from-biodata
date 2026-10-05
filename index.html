@@ -6,7 +6,7 @@
   <meta name="description" content="Insights From BioData provides RNA-seq, alternative splicing, pathway analysis, publication-ready visualization, and reproducible bioinformatics workflow support.">
   <title>Insights From BioData | RNA-seq & Bioinformatics Workflows</title>
   <link rel="icon" href="assets/favicon.svg?v=20260831" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260831">
+  <link rel="stylesheet" href="styles.css?v=20261005">
 </head>
 <body>
   <header class="site-header">
@@ -67,7 +67,7 @@
 
       <div class="header-actions">
         <a class="header-link" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="button header-cta" href="#builder">Request a brief</a>
+        <a class="button header-cta" href="#builder" data-email-brief>Request a brief</a>
       </div>
     </div>
   </header>
@@ -87,7 +87,7 @@
           notes without clinical diagnosis or patient-level medical interpretation.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#builder">Request a project brief</a>
+          <a class="button primary" href="#builder" data-email-brief>Request a project brief</a>
           <a class="button secondary" href="assets/sample-portfolio-report.pdf" target="_blank" rel="noreferrer">View sample report</a>
           <a class="button secondary" href="#results">Browse figures</a>
         </div>
@@ -95,6 +95,7 @@
           <li>RNA-seq differential expression workflows with count filtering, QC summaries, DEG tables, PCA, heatmaps, and volcano plots</li>
           <li>Alternative splicing support focused on rMATS / SUPPA2 outputs, candidate event review, and sashimi-ready handoff</li>
           <li>GSEA/pathway interpretation plus Python/Bash automation for repeatable research data handling</li>
+          <li>Metabolic modeling (GEMsplice / iMAT) to link splicing changes to pathway-level flux.</li>
         </ul>
       </div>
 
@@ -104,11 +105,14 @@
           <span class="status-dot">GitHub portfolio</span>
         </div>
         <figure class="hero-result hero-result-featured">
-          <img src="assets/rna-seq-pca.png" alt="PCA plot from the RNA-seq workflow portfolio repository">
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-pca.png" data-title="PCA sample structure review" aria-label="Enlarge PCA sample structure plot">
+            <img src="assets/rna-seq-pca.png" alt="PCA plot from the RNA-seq workflow portfolio repository">
+          </button>
           <figcaption>
             <strong>PCA sample structure review</strong>
-            <span>RNA-seq workflow repository output</span>
+            <span>Click a figure to enlarge</span>
           </figcaption>
+          <p class="figure-source">Example output from public dataset.</p>
         </figure>
         <div class="preview-deliverables" aria-label="Example deliverables">
           <span>PCA</span>
@@ -117,9 +121,15 @@
           <span>DEG table</span>
         </div>
         <div class="hero-mini-gallery" aria-label="Additional RNA-seq figure examples">
-          <img src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
-          <img src="assets/rna-seq-sample-distance-heatmap.png" alt="Sample distance heatmap from the RNA-seq workflow portfolio repository">
-          <img src="assets/rna-seq-top-deg-heatmap.png" alt="Top differentially expressed gene heatmap from the RNA-seq workflow portfolio repository">
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-volcano.png" data-title="RNA-seq volcano plot" aria-label="Enlarge RNA-seq volcano plot">
+            <img src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
+          </button>
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-sample-distance-heatmap.png" data-title="Sample distance heatmap" aria-label="Enlarge sample distance heatmap">
+            <img src="assets/rna-seq-sample-distance-heatmap.png" alt="Sample distance heatmap from the RNA-seq workflow portfolio repository">
+          </button>
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-top-deg-heatmap.png" data-title="Top DEG heatmap" aria-label="Enlarge top DEG heatmap">
+            <img src="assets/rna-seq-top-deg-heatmap.png" alt="Top differentially expressed gene heatmap from the RNA-seq workflow portfolio repository">
+          </button>
         </div>
         <div class="preview-deliverables portfolio-source" aria-label="Portfolio source">
           <span>QC summary</span>
@@ -127,6 +137,18 @@
           <span>Methods note</span>
         </div>
       </div>
+    </section>
+
+    <section class="section intro-band about" id="about">
+      <div class="intro-text">
+        <p class="eyebrow">Research profile</p>
+        <h2>About.</h2>
+      </div>
+      <p>
+        I am Burak, a graduate student in Bioinformatics and Systems Biology at Gebze Technical University.
+        My research combines RNA splicing analysis and genome-scale metabolic modeling in Alzheimer's disease.
+        I build reproducible RNA-seq and splicing workflows, and I deliver clean figures and clear methods notes.
+      </p>
     </section>
 
     <section class="trust-strip" aria-label="Service highlights">
@@ -165,8 +187,7 @@
           <p class="eyebrow">User-friendly report</p>
           <h2>Publication-ready analysis outputs without hiding the methods.</h2>
           <p>
-            Inspired by mature RNA-seq service pages, this workflow is framed around
-            clear downloadable outputs: plots, tables, scripts, and concise reporting.
+            Every project ends with downloadable plots, tables, and a short report you can use directly.
           </p>
           <div class="report-actions">
             <a class="button primary" href="assets/sample-portfolio-report.pdf" target="_blank" rel="noreferrer">View sample report</a>
@@ -193,7 +214,7 @@
     <section class="section" id="services">
       <div class="section-heading">
         <p class="eyebrow">Core services</p>
-        <h2>Analysis packages shaped around real portfolio work.</h2>
+        <h2>What I offer.</h2>
       </div>
       <div class="service-grid">
         <article class="service-card featured">
@@ -216,12 +237,8 @@
           <h3>Functional Interpretation</h3>
           <p>GSEA and enrichment-oriented summaries that translate ranked gene lists or DEG sets into readable pathway-level research notes.</p>
         </article>
-        <article class="service-card">
-          <span class="card-tag">Scripts</span>
-          <h3>Python/Bash Automation</h3>
-          <p>FASTA parsing, motif search, table cleaning, file organization, batch processing, and small reproducible helpers for repetitive lab-side tasks.</p>
-        </article>
       </div>
+      <p class="service-extra">Also available: small Python/Bash helpers for repetitive lab data tasks.</p>
     </section>
 
     <section class="packages section" id="packages">
@@ -233,6 +250,7 @@
         <article class="package-card">
           <span class="card-tag">Starter</span>
           <h3>Figure Cleanup</h3>
+          <p class="package-time">Typical time: 2-3 days.</p>
           <p>Best for teams that already have tables and need polished scientific figures.</p>
           <ul>
             <li>PCA, heatmap, volcano, or pathway figure</li>
@@ -243,6 +261,7 @@
         <article class="package-card highlighted">
           <span class="card-tag">Core</span>
           <h3>RNA-seq Result Pack</h3>
+          <p class="package-time">Typical time: 5-7 days.</p>
           <p>Best for a focused differential expression comparison with reusable outputs.</p>
           <ul>
             <li>QC-aware DEG workflow and result tables</li>
@@ -253,6 +272,7 @@
         <article class="package-card">
           <span class="card-tag">Advanced</span>
           <h3>Splicing / Pathway Review</h3>
+          <p class="package-time">Time depends on scope.</p>
           <p>Best for deeper review around events, genes, pathways, or selected biology.</p>
           <ul>
             <li>rMATS/SUPPA2-style event filtering</li>
@@ -261,6 +281,7 @@
           </ul>
         </article>
       </div>
+      <p class="package-pricing">Pricing depends on dataset size and scope. Send a brief to get a quote.</p>
     </section>
 
     <section class="builder section" id="builder">
@@ -328,7 +349,10 @@
             <span><strong data-output-count>5</strong> output groups</span>
             <span><strong data-review-depth>Standard</strong> review depth</span>
           </div>
-          <button class="button secondary brief-copy" type="button">Copy brief</button>
+          <div class="brief-actions">
+            <button class="button secondary brief-copy" type="button">Copy brief</button>
+            <a class="button secondary" href="mailto:burakkeskinin@gmail.com" data-email-brief>Email brief</a>
+          </div>
           <p class="copy-status" aria-live="polite"></p>
         </aside>
       </div>
@@ -377,10 +401,16 @@
     <section class="work section" id="work">
       <div class="section-heading">
         <p class="eyebrow">Proof of work</p>
-        <h2>Portfolio signals behind the service offer.</h2>
+        <h2>Selected work.</h2>
       </div>
       <div class="work-grid">
         <article class="work-card wide">
+          <span class="card-tag">Python / MATLAB</span>
+          <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
+          <p>Curated Alzheimer/control workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
+          <a href="https://github.com/Bioinformatikci/gemsplice-humangem-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
+        </article>
+        <article class="work-card">
           <div>
             <span class="card-tag">R / DESeq2</span>
             <h3>RNA-seq Workflow</h3>
@@ -398,13 +428,8 @@
         <article class="work-card">
           <span class="card-tag">STAR / rMATS</span>
           <h3>Alternative Splicing Notes</h3>
-          <p>Workflow design around RNA-seq splicing analysis, event review, and rmats2sashimiplot-style visualization.</p>
-        </article>
-        <article class="work-card">
-          <span class="card-tag">Python / MATLAB</span>
-          <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
-          <p>Curated Alzheimer/control workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
-          <a href="https://github.com/Bioinformatikci/gemsplice-humangem-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
+          <p>A public rMATS skipped-exon analysis example with event filtering and candidate review notes.</p>
+          <a href="https://github.com/Bioinformatikci/rmats-ad-skipped-exon-analysis" target="_blank" rel="noreferrer">Open repository</a>
         </article>
         <article class="work-card">
           <span class="card-tag">Python / Shiny</span>
@@ -429,6 +454,7 @@
             <span class="card-tag">RNA-seq workflow</span>
             <h3>Differential expression volcano plot</h3>
             <p>Portfolio figure showing differential expression signal across genes, prepared as part of a reproducible RNA-seq workflow.</p>
+            <p class="figure-source">Example output from public dataset.</p>
           </div>
         </article>
         <article class="result-card">
@@ -439,6 +465,7 @@
             <span class="card-tag">RNA-seq QC</span>
             <h3>Sample distance heatmap</h3>
             <p>Quality-control style output for reviewing sample relationships before interpretation.</p>
+            <p class="figure-source">Example output from public dataset.</p>
           </div>
         </article>
         <article class="result-card">
@@ -449,6 +476,7 @@
             <span class="card-tag">RNA-seq figures</span>
             <h3>Top DEG heatmap</h3>
             <p>Expression-pattern figure prepared for selected differentially expressed genes.</p>
+            <p class="figure-source">Example output from public dataset.</p>
           </div>
         </article>
         <article class="result-card main-result">
@@ -495,8 +523,7 @@
           <h2>Built around what strong analysis services make easy to verify.</h2>
         </div>
         <p>
-          The site now emphasizes the same trust signals that mature RNA-seq service pages use:
-          publication-ready outputs, downloadable result files, clear scope, and reproducible methods.
+          What you can expect from every project:
         </p>
       </div>
       <div class="standards-grid">
@@ -559,7 +586,7 @@
     <section class="workflow" id="workflow">
       <div class="section-heading">
         <p class="eyebrow">Process</p>
-        <h2>A simple delivery flow for freelance research support.</h2>
+        <h2>How a project works.</h2>
       </div>
       <ol class="steps">
         <li>
@@ -646,7 +673,7 @@
       <div class="faq-list">
         <details>
           <summary>Can you work with public or anonymized datasets?</summary>
-          <p>Yes. Public, simulated, anonymized, or properly authorized research datasets are the safest starting point for early freelance projects.</p>
+          <p>Yes. Public, simulated, anonymized, or properly authorized research datasets are all fine to start with.</p>
         </details>
         <details>
           <summary>What do I receive at the end?</summary>
@@ -680,6 +707,8 @@
           and whether you need figures, tables, scripts, or a short report. Initial projects
           can be coordinated through trusted freelance platforms or a structured project brief.
         </p>
+        <p><a id="contact-email" href="mailto:burakkeskinin@gmail.com">burakkeskinin@gmail.com</a></p>
+        <p>I usually reply within 24-48 hours.</p>
       </div>
       <div class="contact-actions">
         <a class="button primary" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">View GitHub profile</a>
@@ -704,6 +733,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260831"></script>
+  <script src="script.js?v=20261005"></script>
 </body>
 </html>

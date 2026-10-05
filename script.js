@@ -4,6 +4,8 @@ const navGroups = document.querySelectorAll(".nav-group");
 const modal = document.querySelector(".image-modal");
 const modalImage = modal?.querySelector("img");
 const modalTitle = modal?.querySelector("#modal-title");
+const modalCloseButton = modal?.querySelector(".modal-close");
+let modalTrigger = null;
 const scopeInputs = document.querySelectorAll(".builder-options input");
 const scopeLevel = document.querySelector("[data-scope-level]");
 const scopeSummary = document.querySelector("[data-scope-summary]");
@@ -12,6 +14,8 @@ const outputCount = document.querySelector("[data-output-count]");
 const reviewDepth = document.querySelector("[data-review-depth]");
 const copyBriefButton = document.querySelector(".brief-copy");
 const copyStatus = document.querySelector(".copy-status");
+const emailBriefLinks = [...document.querySelectorAll("[data-email-brief]")];
+const emailBriefFallbacks = new Map(emailBriefLinks.map((link) => [link, link.getAttribute("href")]));
 const explorerTabs = document.querySelectorAll("[data-explorer-tab]");
 const explorerKicker = document.querySelector("[data-explorer-kicker]");
 const explorerTitle = document.querySelector("[data-explorer-title]");
@@ -150,38 +154,96 @@ document.querySelectorAll(".nav-menu a").forEach((link) => {
   });
 });
 
+function closeImageModal() {
+  if (!modal || modal.hidden || !modalImage) return;
+
+  modal.hidden = true;
+  modalImage.removeAttribute("src");
+  document.body.classList.remove("modal-open");
+  modalTrigger?.focus();
+  modalTrigger = null;
+}
+
 document.querySelectorAll(".result-image-button").forEach((button) => {
   button.addEventListener("click", () => {
-    if (!modal || !modalImage || !modalTitle) return;
+    if (!modal || !modalImage || !modalTitle || !modalCloseButton) return;
 
-    modalImage.src = button.dataset.image || "";
-    modalImage.alt = button.querySelector("img")?.alt || "";
+    const image = button.querySelector("img");
+    if (!image) return;
+
+    modalTrigger = button;
+    modalImage.src = button.dataset.image || image.src;
+    modalImage.alt = image.alt;
     modalTitle.textContent = button.dataset.title || "Result preview";
     modal.hidden = false;
     document.body.classList.add("modal-open");
+    modalCloseButton.focus();
   });
 });
 
 document.querySelectorAll("[data-close-modal]").forEach((button) => {
-  button.addEventListener("click", () => {
-    if (!modal || !modalImage) return;
-
-    modal.hidden = true;
-    modalImage.src = "";
-    document.body.classList.remove("modal-open");
-  });
+  button.addEventListener("click", closeImageModal);
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape" || !modal || modal.hidden) return;
+  if (!modal || modal.hidden) return;
 
-  modal.hidden = true;
-  if (modalImage) modalImage.src = "";
-  document.body.classList.remove("modal-open");
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeImageModal();
+  } else if (event.key === "Tab") {
+    // The close control is currently the only focusable element in the dialog.
+    event.preventDefault();
+    modalCloseButton?.focus();
+  }
 });
 
 function getSelectedScopes() {
   return [...scopeInputs].filter((input) => input.checked).map((input) => input.value);
+}
+
+function getBriefText() {
+  if (!scopeLevel || !scopeSummary || !deliverablesList) return "";
+
+  const deliverables = [...deliverablesList.querySelectorAll("li")]
+    .map((item) => `- ${item.textContent}`)
+    .join("\n");
+  return `${scopeLevel.textContent}\n${scopeSummary.textContent}\n\nExpected deliverables:\n${deliverables}`;
+}
+
+function getPublicEmail() {
+  const href = document.querySelector("#contact-email")?.getAttribute("href") || "";
+  if (!href.startsWith("mailto:")) return "";
+
+  const address = href.slice("mailto:".length).split("?")[0];
+  return /^[^\s@,;?&#/]+@[^\s@,;?&#/]+\.[^\s@,;?&#/]+$/.test(address) ? address : "";
+}
+
+function updateEmailBriefLinks() {
+  const email = getPublicEmail();
+  const brief = getBriefText();
+
+  emailBriefLinks.forEach((link) => {
+    const fallback = emailBriefFallbacks.get(link);
+    if (email && brief) {
+      const subject = encodeURIComponent("Insights From BioData project brief");
+      link.href = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(brief)}`;
+      link.removeAttribute("aria-disabled");
+      link.classList.remove("is-disabled");
+      link.removeAttribute("title");
+    } else if (fallback === "#builder" && (link.closest(".site-header") || link.closest(".hero"))) {
+      // Header and hero requests still lead to the brief builder without email.
+      link.setAttribute("href", fallback);
+      link.removeAttribute("aria-disabled");
+      link.classList.remove("is-disabled");
+      link.removeAttribute("title");
+    } else {
+      link.removeAttribute("href");
+      link.setAttribute("aria-disabled", "true");
+      link.classList.add("is-disabled");
+      link.title = "Email contact is currently unavailable";
+    }
+  });
 }
 
 function updateScopeBrief() {
@@ -199,6 +261,7 @@ function updateScopeBrief() {
   deliverablesList.innerHTML = deliverables.map((item) => `<li>${item}</li>`).join("");
   outputCount.textContent = String(deliverables.length);
   reviewDepth.textContent = depth;
+  updateEmailBriefLinks();
 }
 
 scopeInputs.forEach((input) => {
@@ -206,10 +269,9 @@ scopeInputs.forEach((input) => {
 });
 
 copyBriefButton?.addEventListener("click", async () => {
-  if (!scopeLevel || !scopeSummary || !deliverablesList || !copyStatus) return;
-
-  const deliverables = [...deliverablesList.querySelectorAll("li")].map((item) => `- ${item.textContent}`).join("\n");
-  const text = `${scopeLevel.textContent}\n${scopeSummary.textContent}\n\nExpected deliverables:\n${deliverables}`;
+  if (!copyStatus) return;
+  const text = getBriefText();
+  if (!text) return;
 
   try {
     await navigator.clipboard.writeText(text);
