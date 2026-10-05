@@ -1,0 +1,18 @@
+name: Validate static site
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lightweight-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check local files and page anchors
+        run: python3 scripts/check_local_links.py
+      - name: Check JavaScript syntax
+        run: node --check script.js

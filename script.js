@@ -18,7 +18,6 @@ const explorerTitle = document.querySelector("[data-explorer-title]");
 const explorerCopy = document.querySelector("[data-explorer-copy]");
 const explorerArtifacts = document.querySelector("[data-explorer-artifacts]");
 const explorerChecks = document.querySelector("[data-explorer-checks]");
-const explorerScore = document.querySelector("[data-explorer-score]");
 
 const scopeMap = {
   rna: {
@@ -48,7 +47,6 @@ const explorerData = {
     kicker: "DESeq2-style workflow",
     title: "RNA-seq differential expression package",
     copy: "A focused comparison workflow with count filtering, metadata-aware design, differential expression tables, and publication-ready plots.",
-    score: "92%",
     artifacts: [
       ["results_DEG_table.csv", "ranked genes, log2FC, adjusted p-values"],
       ["normalized_counts.csv", "clean matrix for downstream review"],
@@ -63,7 +61,6 @@ const explorerData = {
     kicker: "rMATS / SUPPA2-ready review",
     title: "Alternative splicing event handoff",
     copy: "A targeted splicing review that turns event tables into filtered candidates, selected gene views, and review-ready summaries.",
-    score: "88%",
     artifacts: [
       ["filtered_events.tsv", "event type, FDR, delta inclusion"],
       ["selected_gene_events.csv", "gene-level candidate shortlist"],
@@ -76,7 +73,6 @@ const explorerData = {
     kicker: "GSEA / pathway summary",
     title: "Functional interpretation package",
     copy: "A pathway-level review that converts ranked genes or DEG sets into enrichment tables, pathway plots, and concise biological notes.",
-    score: "90%",
     artifacts: [
       ["ranked_gene_list.rnk", "input-ready ranked statistics"],
       ["enrichment_results.csv", "pathway names, scores, adjusted p-values"],
@@ -89,7 +85,6 @@ const explorerData = {
     kicker: "Python / Bash support",
     title: "Reusable analysis helper package",
     copy: "Small scripts that reduce repetitive wet-lab data handling, table cleanup, file organization, and reproducible output generation.",
-    score: "86%",
     artifacts: [
       ["clean_tables.py", "repeatable table formatting helper"],
       ["batch_rename.sh", "safe file organization utility"],
@@ -228,12 +223,11 @@ updateScopeBrief();
 
 function updateExplorer(tabName) {
   const data = explorerData[tabName];
-  if (!data || !explorerKicker || !explorerTitle || !explorerCopy || !explorerArtifacts || !explorerChecks || !explorerScore) return;
+  if (!data || !explorerKicker || !explorerTitle || !explorerCopy || !explorerArtifacts || !explorerChecks) return;
 
   explorerKicker.textContent = data.kicker;
   explorerTitle.textContent = data.title;
   explorerCopy.textContent = data.copy;
-  explorerScore.textContent = data.score;
   explorerArtifacts.innerHTML = data.artifacts
     .map(([name, detail]) => `<div class="artifact-item"><strong>${name}</strong><span>${detail}</span></div>`)
     .join("");

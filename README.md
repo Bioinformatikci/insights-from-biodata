@@ -1,60 +1,39 @@
 # Insights From BioData
 
-Single-page portfolio site for RNA-seq, alternative splicing, pathway analysis, publication-ready visualization, and reproducible bioinformatics workflow support.
+A static, single-page bioinformatics portfolio. The page presents research-support services, links to project repositories, and displays example RNA-seq and pathway figures. It includes an interactive project-brief builder, a deliverable explorer, and a gallery with larger image previews. The deliverable explorer shows illustrative examples; its files and checks are not measured project results or guaranteed outputs.
 
-## Live Link
+## View and preview
 
-Live GitHub Pages site:
+The GitHub Pages URL listed in this project is [bioinformatikci.github.io/insights-from-biodata](https://bioinformatikci.github.io/insights-from-biodata/). To preview the checked-out files locally, run from the repository root:
 
-```text
-https://bioinformatikci.github.io/insights-from-biodata/
+```bash
+python3 -m http.server 8000
 ```
 
-## File Structure
+Then open <http://localhost:8000/>. The site is plain HTML, CSS, and JavaScript; it does not require a build step or package installation.
 
-```text
-.
-├── index.html
-├── styles.css
-├── script.js
-├── assets/
-│   ├── sample-portfolio-report.pdf
-│   ├── rna-seq-pca.png
-│   ├── rna-seq-volcano.png
-│   ├── rna-seq-sample-distance-heatmap.png
-│   ├── rna-seq-top-deg-heatmap.png
-│   └── pathway and objective figure assets
-├── .gitignore
-├── LICENSE
-└── README.md
+## Repository contents
+
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Page structure, text, and links |
+| `styles.css` | Responsive layout and visual styling |
+| `script.js` | Navigation, project-brief builder, deliverable explorer, and image preview interactions |
+| `assets/` | Example figures, favicon, and a sample PDF report |
+
+The figures and PDF in `assets/` are portfolio examples. They do not provide the raw inputs or analysis code needed to reproduce the underlying scientific results. Follow the linked project repositories for their available methods and data notes.
+
+## Checks
+
+GitHub Actions runs a lightweight check on pushes and pull requests. It verifies local HTML and README file references, HTML fragment targets, and JavaScript syntax. Run the same checks locally with:
+
+```bash
+python3 scripts/check_local_links.py
+node --check script.js
 ```
 
-## Included Assets
+These checks catch broken local references and JavaScript parse errors. They do not test browser rendering, external links, accessibility, or scientific reproducibility.
 
-- Sample portfolio report PDF.
-- RNA-seq PCA, volcano, and heatmap figures.
-- Pathway and objective-review figures used in the portfolio gallery.
+## Contact and scope
 
-## Local Preview
-
-Use any static file server from this folder. For example:
-
-```powershell
-python -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000
-```
-
-## Contact
-
-- Email: [burakkeskinin@gmail.com](mailto:burakkeskinin@gmail.com)
-- LinkedIn: [Burak K.](https://www.linkedin.com/in/burak-k-42709a121/)
-- GitHub: [Bioinformatikci](https://github.com/Bioinformatikci)
-
-## Research-Only Note
-
-This site describes research support, data analysis, visualization, and reproducible reporting services. It does not offer clinical diagnosis, treatment decisions, or patient-specific medical interpretation.
+Contact links are on the website. The page describes research support and does not offer clinical diagnosis, treatment decisions, or patient-specific medical interpretation.
