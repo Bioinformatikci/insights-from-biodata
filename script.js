@@ -15,7 +15,6 @@ const reviewDepth = document.querySelector("[data-review-depth]");
 const copyBriefButton = document.querySelector(".brief-copy");
 const copyStatus = document.querySelector(".copy-status");
 const emailBriefLinks = [...document.querySelectorAll("[data-email-brief]")];
-const emailBriefFallbacks = new Map(emailBriefLinks.map((link) => [link, link.getAttribute("href")]));
 const explorerTabs = document.querySelectorAll("[data-explorer-tab]");
 const explorerKicker = document.querySelector("[data-explorer-kicker]");
 const explorerTitle = document.querySelector("[data-explorer-title]");
@@ -224,16 +223,9 @@ function updateEmailBriefLinks() {
   const brief = getBriefText();
 
   emailBriefLinks.forEach((link) => {
-    const fallback = emailBriefFallbacks.get(link);
     if (email && brief) {
       const subject = encodeURIComponent("Insights From BioData project brief");
       link.href = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(brief)}`;
-      link.removeAttribute("aria-disabled");
-      link.classList.remove("is-disabled");
-      link.removeAttribute("title");
-    } else if (fallback === "#builder" && (link.closest(".site-header") || link.closest(".hero"))) {
-      // Header and hero requests still lead to the brief builder without email.
-      link.setAttribute("href", fallback);
       link.removeAttribute("aria-disabled");
       link.classList.remove("is-disabled");
       link.removeAttribute("title");
