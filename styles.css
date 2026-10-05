@@ -404,8 +404,8 @@ dd {
 h1 {
   max-width: 980px;
   margin: 0;
-  font-size: clamp(2.45rem, 5.6vw, 5.3rem);
-  line-height: 0.97;
+  font-size: clamp(2.3rem, 4.2vw, 4.1rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
@@ -451,8 +451,10 @@ h3 {
   padding: 12px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
+  font: inherit;
   font-weight: 740;
   text-decoration: none;
+  cursor: pointer;
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease;
 }
 
@@ -853,8 +855,11 @@ a.is-disabled {
 }
 
 .section-heading {
-  max-width: 900px;
   margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  max-width: 900px;
 }
 
 .intro-band {
@@ -1191,6 +1196,12 @@ a.is-disabled {
   width: fit-content;
 }
 
+.brief-card .button.secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
 .brief-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1345,12 +1356,11 @@ a.is-disabled {
 .work-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
 }
 
 .work-card.wide {
-  grid-column: span 2;
+  grid-column: 1 / -1;
   background:
     linear-gradient(120deg, rgba(15, 118, 110, 0.92), rgba(66, 103, 166, 0.86)),
     var(--teal);
@@ -1387,6 +1397,7 @@ a.is-disabled {
 
 .work-card a {
   width: fit-content;
+  margin-top: auto;
   color: var(--teal-dark);
   font-weight: 780;
   text-decoration: none;
@@ -1565,7 +1576,7 @@ a.is-disabled {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   padding: 0;
-  margin: 0;
+  margin-block: 0;
   list-style: none;
 }
 
@@ -1632,6 +1643,9 @@ a.is-disabled {
 .faq-list {
   display: grid;
   gap: 10px;
+}
+
+.faq-list details {
   max-width: 960px;
 }
 
@@ -1853,6 +1867,10 @@ a.is-disabled {
     grid-column: span 2;
   }
 
+  .work-card:last-child {
+    grid-column: span 2;
+  }
+
   .main-result {
     grid-column: span 2;
   }
@@ -1895,7 +1913,8 @@ a.is-disabled {
     display: grid;
   }
 
-  .work-card.wide {
+  .work-card.wide,
+  .work-card:last-child {
     grid-column: span 1;
   }
 
