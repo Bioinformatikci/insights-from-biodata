@@ -6,7 +6,7 @@
   <meta name="description" content="Insights From BioData provides RNA-seq, alternative splicing, pathway analysis, publication-ready visualization, and reproducible bioinformatics workflow support.">
   <title>Insights From BioData | RNA-seq & Bioinformatics Workflows</title>
   <link rel="icon" href="assets/favicon.svg?v=20260831" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261005">
+  <link rel="stylesheet" href="styles.css?v=20261012">
 </head>
 <body>
   <header class="site-header">
@@ -34,7 +34,7 @@
           <div class="nav-menu">
             <a href="#work"><strong>GitHub proof</strong><span>Open workflow repositories</span></a>
             <a href="#results"><strong>Figure gallery</strong><span>RNA-seq and pathway-level outputs</span></a>
-            <a href="assets/sample-portfolio-report.pdf" target="_blank" rel="noreferrer"><strong>Sample report</strong><span>Downloadable portfolio report</span></a>
+            <a href="projects/synthetic-imat/index.html"><strong>iMAT results showcase</strong><span>Figures, matrices, and audited tables</span></a>
           </div>
         </div>
 
@@ -88,7 +88,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#builder">Request a project brief</a>
-          <a class="button secondary" href="assets/sample-portfolio-report.pdf" target="_blank" rel="noreferrer">View sample report</a>
+          <a class="button secondary" href="projects/synthetic-imat/index.html">Explore iMAT results</a>
           <a class="button secondary" href="#results">Browse figures</a>
         </div>
         <ul class="hero-lines" aria-label="Core service capabilities">
@@ -139,6 +139,23 @@
       </div>
     </section>
 
+    <section class="featured-study section" id="featured-study" aria-labelledby="featured-study-title">
+      <div class="featured-study-copy">
+        <p class="eyebrow">Featured computed project · synthetic cohort</p>
+        <h2 id="featured-study-title">Three iMAT layers. Every result open for inspection.</h2>
+        <p>Follow 200 artificial samples through Human-GEM 1.12.0, COBAMP reaction scoring, TROPPO iMAT with Gurobi, and Fisher plus reporter-like statistics. The showcase includes all three reaction matrices, four vector figures, and the checks behind them.</p>
+        <p class="featured-study-note">A reproducible methods demonstration using synthetic inputs. No biological or clinical conclusion is drawn from these figures.</p>
+        <div class="featured-study-actions">
+          <a class="button primary" href="projects/synthetic-imat/index.html">Open results and figures</a>
+          <a class="button secondary" href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects/tree/main/splicing-pathogenicity-imat-demo" target="_blank" rel="noreferrer">Explore code and inputs</a>
+        </div>
+      </div>
+      <a class="featured-study-visual" href="projects/synthetic-imat/index.html" aria-label="Open the synthetic iMAT results showcase">
+        <img src="projects/synthetic-imat/figures/active_reactions.svg" alt="Active reaction counts across controls and three synthetic AD-labelled iMAT stages" loading="lazy">
+        <span>100 samples per group or stage · verified reaction vectors</span>
+      </a>
+    </section>
+
     <section class="section intro-band about" id="about">
       <div class="intro-text">
         <p class="eyebrow">Research profile</p>
@@ -184,28 +201,29 @@
     <section class="report section" id="report">
       <div class="report-layout">
         <div>
-          <p class="eyebrow">User-friendly report</p>
-          <h2>Publication-ready analysis outputs without hiding the methods.</h2>
+          <p class="eyebrow">Open analysis example</p>
+          <h2>See a complete analysis from model input to figures.</h2>
           <p>
-            Every project ends with downloadable plots, tables, and a short report you can use directly.
+            Explore the synthetic iMAT demonstration with its computed figures, sample diagnostics,
+            reaction matrices, statistics, and reproduction notes.
           </p>
           <div class="report-actions">
-            <a class="button primary" href="assets/sample-portfolio-report.pdf" target="_blank" rel="noreferrer">View sample report</a>
+            <a class="button primary" href="projects/synthetic-imat/index.html">Open analysis showcase</a>
             <a class="button secondary" href="#results">Browse example results</a>
           </div>
         </div>
 
         <div class="report-card">
           <div class="report-card-top">
-            <span>Full analysis includes</span>
-            <strong>RNA-seq focused</strong>
+            <span>Computed showcase includes</span>
+            <strong>Synthetic iMAT run</strong>
           </div>
           <ul class="analysis-includes">
-            <li>Sample distance review with PCA or heatmap</li>
-            <li>Differential gene expression table</li>
-            <li>Volcano, heatmap, and selected expression figures</li>
-            <li>Gene set enrichment or pathway-level summary</li>
-            <li>Reusable scripts and version-aware method notes</li>
+            <li>Three 13,070 × 200 reaction activity matrices</li>
+            <li>Matched model-size and reaction-overlap checks</li>
+            <li>Four inspectable vector figures</li>
+            <li>Fisher and reporter-like result tables</li>
+            <li>Documented synthetic inputs and reproducible scripts</li>
           </ul>
         </div>
       </div>
@@ -405,6 +423,12 @@
       </div>
       <div class="work-grid">
         <article class="work-card wide">
+          <span class="card-tag">Featured · Python / R / Human-GEM</span>
+          <h3>Synthetic splicing and pathogenicity iMAT showcase</h3>
+          <p>Three computed Gurobi/iMAT layers for 100 AD-labelled and 100 control-labelled artificial samples, with downloadable reaction matrices, Fisher and reporter-like tables, vector figures, and input audits.</p>
+          <a href="projects/synthetic-imat/index.html">Open the results showcase</a>
+        </article>
+        <article class="work-card">
           <span class="card-tag">Python / MATLAB</span>
           <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
           <p>Curated Alzheimer/young comparison workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
@@ -446,6 +470,28 @@
         <h2>Curated portfolio outputs from RNA-seq and pathway-level workflows.</h2>
       </div>
       <div class="results-grid">
+        <article class="result-card main-result">
+          <button class="result-image-button" type="button" data-image="projects/synthetic-imat/figures/active_reactions.svg" data-title="Reaction activity across staged iMAT inputs" aria-label="Enlarge active reaction count plot">
+            <img src="projects/synthetic-imat/figures/active_reactions.svg" alt="Active reaction counts for controls and three synthetic AD-labelled iMAT stages" loading="lazy">
+          </button>
+          <div>
+            <span class="card-tag">Featured synthetic iMAT run</span>
+            <h3>Reaction activity across three model stages</h3>
+            <p>All 100 samples in each group or stage are shown. The same control vectors are used throughout the staged comparison.</p>
+            <p class="figure-source">Synthetic-data methods demonstration. <a href="projects/synthetic-imat/index.html">Open full results and downloads</a>.</p>
+          </div>
+        </article>
+        <article class="result-card">
+          <button class="result-image-button" type="button" data-image="projects/synthetic-imat/figures/paired_model_size.svg" data-title="Paired iMAT model-size change" aria-label="Enlarge paired model-size change plot">
+            <img src="projects/synthetic-imat/figures/paired_model_size.svg" alt="Paired active reaction count changes across synthetic iMAT stages" loading="lazy">
+          </button>
+          <div>
+            <span class="card-tag">Paired model comparison</span>
+            <h3>Model-size changes by sample</h3>
+            <p>Each artificial AD-labelled sample is paired with its own splicing and rank-adjusted model.</p>
+            <p class="figure-source">Synthetic-data methods demonstration; no disease inference.</p>
+          </div>
+        </article>
         <article class="result-card main-result">
           <button class="result-image-button" type="button" data-image="assets/rna-seq-volcano.png" data-title="RNA-seq volcano plot">
             <img src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
