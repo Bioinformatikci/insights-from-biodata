@@ -13,7 +13,10 @@
   <meta property="og:image" content="https://bioinformatikci.github.io/insights-from-biodata/assets/rna-seq-pca.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg?v=20260831" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261031">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261104">
 </head>
 <body>
   <header class="site-header">
@@ -128,17 +131,6 @@
           <span>Volcano</span>
           <span>DEG table</span>
         </div>
-        <div class="hero-mini-gallery" aria-label="Additional RNA-seq figure examples">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-volcano.png" data-title="RNA-seq volcano plot" aria-label="Enlarge RNA-seq volcano plot">
-            <img src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
-          </button>
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-sample-distance-heatmap.png" data-title="Sample distance heatmap" aria-label="Enlarge sample distance heatmap">
-            <img src="assets/rna-seq-sample-distance-heatmap.png" alt="Sample distance heatmap from the RNA-seq workflow portfolio repository">
-          </button>
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-top-deg-heatmap.png" data-title="Top DEG heatmap" aria-label="Enlarge top DEG heatmap">
-            <img src="assets/rna-seq-top-deg-heatmap.png" alt="Top differentially expressed gene heatmap from the RNA-seq workflow portfolio repository">
-          </button>
-        </div>
         <div class="preview-deliverables portfolio-source" aria-label="Portfolio source">
           <span>QC summary</span>
           <span>Result tables</span>
@@ -147,9 +139,15 @@
       </div>
     </section>
 
+    <section class="proof-row" aria-label="Published results">
+      <a href="https://github.com/Bioinformatikci/rna-seq-workflow/blob/main/reports/summary_report.md" target="_blank" rel="noreferrer"><strong>749 DEGs</strong><span>from public airway RNA-seq, with the full report</span></a>
+      <a href="https://github.com/Bioinformatikci/rmats-ad-skipped-exon-analysis/tree/main/results/rmats_summary" target="_blank" rel="noreferrer"><strong>785 splicing events</strong><span>filtered candidates from an exploratory rMATS analysis</span></a>
+      <a href="projects/synthetic-imat/index.html"><strong>13,070 reactions</strong><span>modeled per sample in a synthetic iMAT demo</span></a>
+    </section>
+
     <section class="section intro-band about" id="about">
       <div class="intro-text">
-        <h2>About.</h2>
+        <h2>About</h2>
       </div>
       <p>
         I am Burak Keskin, an MSc student in Bioinformatics and Systems Biology at Gebze Technical University.
@@ -186,7 +184,7 @@
 
     <section class="section" id="services">
       <div class="section-heading">
-        <h2>What I offer.</h2>
+        <h2>What I offer</h2>
       </div>
       <div class="service-grid">
         <article class="service-card featured">
@@ -369,22 +367,10 @@
 
     <section class="work section" id="work">
       <div class="section-heading">
-        <h2>Selected work.</h2>
+        <h2>Selected work</h2>
       </div>
       <div class="work-grid">
         <article class="work-card wide">
-          <span class="card-tag">Python / R / Human-GEM</span>
-          <h3>Synthetic splicing and pathogenicity iMAT showcase</h3>
-          <p>Three computed Gurobi/iMAT layers for 100 AD-labelled and 100 control-labelled artificial samples, with downloadable reaction matrices, Fisher and reporter-like tables, vector figures, and input audits.</p>
-          <a href="projects/synthetic-imat/index.html">Open the results showcase</a>
-        </article>
-        <article class="work-card">
-          <span class="card-tag">Python / MATLAB</span>
-          <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
-          <p>Curated Alzheimer/control workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
-          <a href="https://github.com/Bioinformatikci/gemsplice-humangem-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
-        </article>
-        <article class="work-card">
           <div>
             <span class="card-tag">R / DESeq2</span>
             <h3>RNA-seq Workflow</h3>
@@ -406,10 +392,10 @@
           <a href="https://github.com/Bioinformatikci/rmats-ad-skipped-exon-analysis" target="_blank" rel="noreferrer">Open repository</a>
         </article>
         <article class="work-card">
-          <span class="card-tag">Python / Human-GEM</span>
-          <h3>iMAT Tool</h3>
-          <p>Interactive terminal tool for per-sample Human-GEM iMAT, Fisher and reporter-like analysis, and optional gene zeroing, with a synthetic demo.</p>
-          <a href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects/tree/main/imat-tool" target="_blank" rel="noreferrer">Open project</a>
+          <span class="card-tag">Python / MATLAB</span>
+          <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
+          <p>Curated Alzheimer/control workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
+          <a href="https://github.com/Bioinformatikci/gemsplice-humangem-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
         </article>
         <article class="work-card">
           <span class="card-tag">Python / Gurobi</span>
@@ -418,6 +404,18 @@
           <a href="https://github.com/Bioinformatikci/humangem-gimme-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
         </article>
         <article class="work-card">
+          <span class="card-tag">Python / R / Human-GEM</span>
+          <h3>Synthetic splicing and pathogenicity iMAT showcase</h3>
+          <p>Three computed iMAT layers for 200 artificial samples, with downloadable matrices, statistics tables, and input audits.</p>
+          <a href="projects/synthetic-imat/index.html">Open the results showcase</a>
+        </article>
+        <article class="work-card">
+          <span class="card-tag">Python / Human-GEM</span>
+          <h3>iMAT Tool</h3>
+          <p>Interactive terminal tool for per-sample Human-GEM iMAT, Fisher and reporter-like analysis, and optional gene zeroing, with a synthetic demo.</p>
+          <a href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects/tree/main/imat-tool" target="_blank" rel="noreferrer">Open project</a>
+        </article>
+        <article class="work-card span-two">
           <span class="card-tag">Python / Shiny</span>
           <h3>Bioinformatics Portfolio Projects</h3>
           <p>Sequence alignment, FASTA utilities, motif search, volcano plotting, variant summaries, and interactive R/Shiny exploration examples.</p>
@@ -431,6 +429,13 @@
         <p class="eyebrow">Synthetic data, computed with Gurobi</p>
         <h2 id="featured-study-title">Three-stage iMAT demo on synthetic data</h2>
         <p>Follow 200 artificial samples through Human-GEM 1.12.0, COBAMP reaction scoring, TROPPO iMAT with Gurobi, and Fisher plus reporter-like statistics. The showcase includes all three reaction matrices, four vector figures, and the checks behind them.</p>
+        <ul class="analysis-includes">
+            <li>Three 13,070 × 200 reaction activity matrices</li>
+            <li>Matched model-size and reaction-overlap checks</li>
+            <li>Four inspectable vector figures</li>
+            <li>Fisher and reporter-like result tables</li>
+            <li>Documented synthetic inputs and reproducible scripts</li>
+          </ul>
         <p class="featured-study-note">A reproducible methods demonstration using synthetic inputs. No biological or clinical conclusion is drawn from these figures.</p>
         <div class="featured-study-actions">
           <a class="button primary" href="projects/synthetic-imat/index.html">Open results and figures</a>
@@ -443,41 +448,79 @@
       </a>
     </section>
 
-    <section class="report section" id="report">
-      <div class="report-layout">
-        <div>
-          <h2>See a complete analysis from model input to figures.</h2>
-          <p>
-            Explore the synthetic iMAT demonstration with its computed figures, sample diagnostics,
-            reaction matrices, statistics, and reproduction notes.
-          </p>
-          <div class="report-actions">
-            <a class="button primary" href="projects/synthetic-imat/index.html">Open analysis showcase</a>
-            <a class="button secondary" href="#results">Browse example results</a>
-          </div>
-        </div>
-
-        <div class="report-card">
-          <div class="report-card-top">
-            <span>Computed showcase includes</span>
-            <strong>Synthetic iMAT run</strong>
-          </div>
-          <ul class="analysis-includes">
-            <li>Three 13,070 × 200 reaction activity matrices</li>
-            <li>Matched model-size and reaction-overlap checks</li>
-            <li>Four inspectable vector figures</li>
-            <li>Fisher and reporter-like result tables</li>
-            <li>Documented synthetic inputs and reproducible scripts</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="results section" id="results">
       <div class="section-heading">
         <h2>Example results</h2>
       </div>
       <div class="results-grid">
+        <article class="result-card main-result">
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-volcano.png" data-title="RNA-seq volcano plot">
+            <img loading="lazy" src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
+          </button>
+          <div>
+            <span class="card-tag">RNA-seq workflow</span>
+            <h3>Differential expression volcano plot</h3>
+            <p>Portfolio figure showing differential expression signal across genes, prepared as part of a reproducible RNA-seq workflow.</p>
+            <p class="figure-source">Example output from public dataset.</p>
+          </div>
+        </article>
+        <article class="result-card">
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-sample-distance-heatmap.png" data-title="Sample distance heatmap">
+            <img loading="lazy" src="assets/rna-seq-sample-distance-heatmap.png" alt="Sample distance heatmap from the RNA-seq workflow portfolio repository">
+          </button>
+          <div>
+            <span class="card-tag">RNA-seq QC</span>
+            <h3>Sample distance heatmap</h3>
+            <p>Quality-control style output for reviewing sample relationships before interpretation.</p>
+            <p class="figure-source">Example output from public dataset.</p>
+          </div>
+        </article>
+        <article class="result-card">
+          <button class="result-image-button" type="button" data-image="assets/rna-seq-top-deg-heatmap.png" data-title="Top DEG heatmap">
+            <img loading="lazy" src="assets/rna-seq-top-deg-heatmap.png" alt="Top differentially expressed gene heatmap from the RNA-seq workflow portfolio repository">
+          </button>
+          <div>
+            <span class="card-tag">RNA-seq figures</span>
+            <h3>Top DEG heatmap</h3>
+            <p>Expression-pattern figure prepared for selected differentially expressed genes.</p>
+            <p class="figure-source">Example output from public dataset.</p>
+          </div>
+        </article>
+        <article class="result-card main-result">
+          <button class="result-image-button" type="button" data-image="assets/pathway-flux-imat-optimized.png" data-title="Pathway-level relative flux change">
+            <img loading="lazy" src="assets/pathway-flux-imat-optimized.png" alt="Pathway-level relative flux change scatter plot from GEMsplice-iMAT HumanGEM analysis">
+          </button>
+          <div>
+            <span class="card-tag">GEMsplice / iMAT</span>
+            <h3>Pathway-level relative flux change</h3>
+            <p>Advanced portfolio output comparing Alzheimer and control groups across pathway-level metabolic flux changes.</p>
+            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
+          </div>
+        </article>
+        <article class="result-card">
+          <button class="result-image-button" type="button" data-image="assets/objective-projections-optimized.png" data-title="Pairwise objective review">
+            <img loading="lazy" src="assets/objective-projections-optimized.png" alt="Pairwise objective projection plots comparing Alzheimer and control samples">
+          </button>
+          <div>
+            <span class="card-tag">Objective projections</span>
+            <h3>Pairwise objective review</h3>
+            <p>Projection panels showing how sample groups separate across selected metabolic objective values.</p>
+            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
+          </div>
+        </article>
+        <article class="result-card main-result">
+          <button class="result-image-button" type="button" data-image="assets/pathway-flux-tx2gene-optimized.png" data-title="Curated pathway scatter">
+            <img loading="lazy" src="assets/pathway-flux-tx2gene-optimized.png" alt="HumanGEM tx2gene pathway-level relative flux change scatter plot">
+          </button>
+          <div>
+            <span class="card-tag">HumanGEM tx2gene</span>
+            <h3>Curated pathway scatter</h3>
+            <p>Pathway-level scatter plot from the HumanGEM tx2gene analysis.</p>
+            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
+          </div>
+        </article>
         <article class="result-card main-result">
           <button class="result-image-button" type="button" data-image="projects/synthetic-imat/figures/active_reactions.svg" data-title="Reaction activity across staged iMAT inputs" aria-label="Enlarge active reaction count plot">
             <img src="projects/synthetic-imat/figures/active_reactions.svg" alt="Active reaction counts for controls and three synthetic AD-labelled iMAT stages" loading="lazy">
@@ -500,72 +543,6 @@
             <p class="figure-source">Synthetic-data methods demonstration; no disease inference.</p>
           </div>
         </article>
-        <article class="result-card main-result">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-volcano.png" data-title="RNA-seq volcano plot">
-            <img src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
-          </button>
-          <div>
-            <span class="card-tag">RNA-seq workflow</span>
-            <h3>Differential expression volcano plot</h3>
-            <p>Portfolio figure showing differential expression signal across genes, prepared as part of a reproducible RNA-seq workflow.</p>
-            <p class="figure-source">Example output from public dataset.</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-sample-distance-heatmap.png" data-title="Sample distance heatmap">
-            <img src="assets/rna-seq-sample-distance-heatmap.png" alt="Sample distance heatmap from the RNA-seq workflow portfolio repository">
-          </button>
-          <div>
-            <span class="card-tag">RNA-seq QC</span>
-            <h3>Sample distance heatmap</h3>
-            <p>Quality-control style output for reviewing sample relationships before interpretation.</p>
-            <p class="figure-source">Example output from public dataset.</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-top-deg-heatmap.png" data-title="Top DEG heatmap">
-            <img src="assets/rna-seq-top-deg-heatmap.png" alt="Top differentially expressed gene heatmap from the RNA-seq workflow portfolio repository">
-          </button>
-          <div>
-            <span class="card-tag">RNA-seq figures</span>
-            <h3>Top DEG heatmap</h3>
-            <p>Expression-pattern figure prepared for selected differentially expressed genes.</p>
-            <p class="figure-source">Example output from public dataset.</p>
-          </div>
-        </article>
-        <article class="result-card main-result">
-          <button class="result-image-button" type="button" data-image="assets/pathway-flux-imat-optimized.png" data-title="Pathway-level relative flux change">
-            <img src="assets/pathway-flux-imat-optimized.png" alt="Pathway-level relative flux change scatter plot from GEMsplice-iMAT HumanGEM analysis">
-          </button>
-          <div>
-            <span class="card-tag">GEMsplice / iMAT</span>
-            <h3>Pathway-level relative flux change</h3>
-            <p>Advanced portfolio output comparing Alzheimer and control groups across pathway-level metabolic flux changes.</p>
-            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/objective-projections-optimized.png" data-title="Pairwise objective review">
-            <img src="assets/objective-projections-optimized.png" alt="Pairwise objective projection plots comparing Alzheimer and control samples">
-          </button>
-          <div>
-            <span class="card-tag">Objective projections</span>
-            <h3>Pairwise objective review</h3>
-            <p>Projection panels showing how sample groups separate across selected metabolic objective values.</p>
-            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/pathway-flux-tx2gene-optimized.png" data-title="Curated pathway scatter">
-            <img src="assets/pathway-flux-tx2gene-optimized.png" alt="HumanGEM tx2gene pathway-level relative flux change scatter plot">
-          </button>
-          <div>
-            <span class="card-tag">HumanGEM tx2gene</span>
-            <h3>Curated pathway scatter</h3>
-            <p>Pathway-level scatter plot from the HumanGEM tx2gene analysis.</p>
-            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
-          </div>
-        </article>
       </div>
       <p class="results-note">
         Portfolio outputs are shown for research-support demonstration only. Clinical diagnosis,
@@ -576,7 +553,7 @@
     <section class="standards section" id="standards">
       <div class="standards-heading">
         <div>
-          <h2>What to expect from a delivery.</h2>
+          <h2>What to expect from a delivery</h2>
         </div>
         <p>
           Clear outputs and a traceable analysis trail for each project.
@@ -636,7 +613,7 @@
 
     <section class="workflow" id="workflow">
       <div class="section-heading">
-        <h2>How a project works.</h2>
+        <h2>How a project works</h2>
       </div>
       <ol class="steps">
         <li>
@@ -682,7 +659,7 @@
 
     <section class="handoff section" id="handoff">
       <div class="section-heading">
-        <h2>What makes a dataset ready for analysis.</h2>
+        <h2>What makes a dataset ready for analysis</h2>
       </div>
       <div class="handoff-grid">
         <article>
@@ -775,10 +752,10 @@
         <h2 id="modal-title">Result preview</h2>
         <button type="button" class="modal-close" data-close-modal aria-label="Close result preview">Close</button>
       </div>
-      <img src="" alt="">
+      <img loading="lazy" src="" alt="">
     </div>
   </div>
 
-  <script src="script.js?v=20261031"></script>
+  <script src="script.js?v=20261104"></script>
 </body>
 </html>

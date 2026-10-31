@@ -185,6 +185,13 @@ document.querySelectorAll("[data-close-modal]").forEach((button) => {
 });
 
 window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    navGroups.forEach((group) => {
+      group.classList.remove("open");
+      group.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+    });
+  }
+
   if (!modal || modal.hidden) return;
 
   if (event.key === "Escape") {
@@ -288,7 +295,10 @@ function updateExplorer(tabName) {
   explorerChecks.innerHTML = data.checks.map((check) => `<li>${check}</li>`).join("");
 
   explorerTabs.forEach((tab) => {
-    tab.classList.toggle("active", tab.dataset.explorerTab === tabName);
+    const isActive = tab.dataset.explorerTab === tabName;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("role", "tab");
+    tab.setAttribute("aria-selected", String(isActive));
   });
 }
 
@@ -297,3 +307,35 @@ explorerTabs.forEach((tab) => {
 });
 
 updateExplorer("rna");
+
+const resultsGrid = document.querySelector(".results-grid");
+
+if (resultsGrid) {
+  const cards = [...resultsGrid.querySelectorAll(":scope > .result-card")];
+  const picker = document.createElement("div");
+  picker.className = "figure-picker";
+  picker.setAttribute("role", "group");
+  picker.setAttribute("aria-label", "Choose a figure");
+
+  const showCard = (selected) => {
+    cards.forEach((card) => {
+      card.hidden = card !== selected;
+    });
+    picker.querySelectorAll("button").forEach((button, index) => {
+      button.setAttribute("aria-pressed", String(cards[index] === selected));
+    });
+  };
+
+  cards.forEach((card) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = card.querySelector("h3")?.textContent || "Figure";
+    button.addEventListener("click", () => showCard(card));
+    picker.append(button);
+  });
+
+  resultsGrid.classList.add("results-viewer");
+  resultsGrid.prepend(picker);
+  showCard(cards[0]);
+}
+
