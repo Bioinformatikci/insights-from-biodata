@@ -61,7 +61,7 @@ const explorerData = {
     checks: ["metadata and contrast are explicit", "low-count filtering is documented", "figures export cleanly for manuscript use"],
   },
   splicing: {
-    kicker: "rMATS / SUPPA2-ready review",
+    kicker: "rMATS-ready review",
     title: "Alternative splicing event handoff",
     copy: "A targeted splicing review that turns event tables into filtered candidates, selected gene views, and review-ready summaries.",
     artifacts: [

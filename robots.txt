@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bioinformatikci.github.io/insights-from-biodata/sitemap.xml

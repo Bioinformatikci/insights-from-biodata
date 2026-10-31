@@ -8,7 +8,7 @@
   --teal: #0f766e;
   --teal-dark: #0a4f4b;
   --green: #7ca64f;
-  --coral: #d86e50;
+  --coral: #0f766e;
   --gold: #bd8727;
   --blue: #4267a6;
   --shadow: 0 24px 70px rgba(21, 27, 26, 0.12);
@@ -26,9 +26,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background:
-    linear-gradient(135deg, rgba(15, 118, 110, 0.055) 0 1px, transparent 1px 32px),
-    var(--paper);
+  background: var(--paper);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
@@ -52,7 +50,7 @@ main {
 }
 
 #featured-study {
-  order: 12;
+  order: 65;
 }
 
 #about {
@@ -368,8 +366,8 @@ section,
   min-height: 44px;
   padding: 10px 16px;
   color: #fff;
-  background: #e95658;
-  border-color: #e95658;
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
   box-shadow: none;
 }
 
@@ -390,10 +388,8 @@ section,
 .eyebrow {
   margin: 0 0 12px;
   color: var(--teal);
-  font-size: 0.78rem;
-  font-weight: 780;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 h1,
@@ -1385,10 +1381,8 @@ a.is-disabled {
   display: inline-flex;
   margin-bottom: 16px;
   color: var(--teal);
-  font-size: 0.72rem;
-  font-weight: 820;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .service-card p,
@@ -2305,4 +2299,40 @@ a.is-disabled {
   .menu-toggle {
     display: none !important;
   }
+}
+
+/* Headings align with the content below them. */
+.section-heading {
+  max-width: none;
+}
+
+.intro-band > * {
+  margin-inline: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.button.primary {
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+  color: #fff;
+  box-shadow: none;
+}
+
+.button.primary:hover,
+.button.header-cta:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.brief-card .button.secondary {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+
+.stack > * {
+  margin-inline: 0;
 }

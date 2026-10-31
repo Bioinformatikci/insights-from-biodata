@@ -20,6 +20,8 @@ Then open <http://localhost:8000/>. The site is plain HTML, CSS, and JavaScript;
 | `styles.css` | Responsive layout and visual styling |
 | `script.js` | Navigation, project-brief builder, deliverable explorer, and image preview interactions |
 | `assets/` | Example figures, favicon, and a sample PDF report |
+| `projects/synthetic-imat/` | Synthetic iMAT results page with downloadable tables |
+| `robots.txt`, `sitemap.xml` | Search-engine files for the published site |
 
 The figures and PDF in `assets/` are portfolio examples. They do not provide the raw inputs or analysis code needed to reproduce the underlying scientific results. Follow the linked project repositories for their available methods and data notes.
 
