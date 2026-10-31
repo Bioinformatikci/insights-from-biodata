@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How a project moves from dataset scoping to delivery, and what makes a dataset ready.">
+  <title>How a project works | Insights From BioData</title>
+  <link rel="canonical" href="https://bioinformatikci.github.io/insights-from-biodata/process/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How a project works | Insights From BioData">
+  <meta property="og:description" content="How a project moves from dataset scoping to delivery, and what makes a dataset ready.">
+  <meta property="og:url" content="https://bioinformatikci.github.io/insights-from-biodata/process/">
+  <meta property="og:image" content="https://bioinformatikci.github.io/insights-from-biodata/assets/rna-seq-pca.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg?v=20260831" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20261105">
+</head>
+<body data-page="process">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="Insights From BioData home">
+        <span class="brand-mark">IFB</span>
+        <span>Insights From BioData</span>
+      </a>
+
+      <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+
+      <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="../services/">Services</a>
+        <a href="../portfolio/">Portfolio</a>
+        <a href="../resources/">Resources</a>
+        <a href="../process/" aria-current="page">Process</a>
+        <a href="../about/">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-link" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button header-cta" href="../resources/#builder">Request a brief</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="workflow" id="workflow">
+      <div class="section-heading">
+        <h1 class="page-title">How a project works</h1>
+      </div>
+      <ol class="steps">
+        <li>
+          <span>01</span>
+          <h3>Scope the dataset</h3>
+          <p>Clarify organism, sample groups, metadata, contrast, desired figures, and what data can be shared safely.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Run the workflow</h3>
+          <p>Analyze with transparent scripts, named outputs, quality checks, and checkpoints that make the result traceable.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Deliver clean files</h3>
+          <p>Provide tables, plots, scripts, and a short report that explains what was done and what the results show.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="specs section" id="specs">
+      <div class="section-heading">
+        <h2>Inputs, analyses, and deliverables</h2>
+      </div>
+      <div class="spec-table" role="table" aria-label="Technical specifications">
+        <div role="row">
+          <strong role="cell">Accepted inputs</strong>
+          <span role="cell">Count matrix, normalized matrix, Salmon/quantification summaries, metadata, selected public datasets</span>
+        </div>
+        <div role="row">
+          <strong role="cell">Core analyses</strong>
+          <span role="cell">Differential expression, PCA/heatmap/volcano, pathway/GSEA review, alternative splicing event summaries</span>
+        </div>
+        <div role="row">
+          <strong role="cell">Visualization</strong>
+          <span role="cell">Publication-ready static figures with clean labels, legends, dimensions, and export formats</span>
+        </div>
+        <div role="row">
+          <strong role="cell">Statistical notes</strong>
+          <span role="cell">Contrast definition, filtering assumptions, adjusted p-values, ranked lists, and method limitations</span>
+        </div>
+        <div role="row">
+          <strong role="cell">Deliverables</strong>
+          <span role="cell">Tables, figures, scripts/notebooks when appropriate, and a concise report or methods summary</span>
+        </div>
+        <div role="row">
+          <strong role="cell">Scope boundary</strong>
+          <span role="cell">Research support only; no diagnosis, treatment guidance, or patient-specific medical interpretation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="handoff section" id="handoff">
+      <div class="section-heading">
+        <h2>What makes a dataset ready for analysis</h2>
+      </div>
+      <div class="handoff-grid">
+        <article>
+          <h3>Minimum inputs</h3>
+          <ul>
+            <li>Raw count matrix or accepted quantification outputs</li>
+            <li>Sample metadata with groups, batches, and contrasts</li>
+            <li>Organism, genome/reference version, and gene annotation notes</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Useful context</h3>
+          <ul>
+            <li>Target genes, pathways, or splicing events of interest</li>
+            <li>Required figure formats for thesis, report, or manuscript use</li>
+            <li>Any previous scripts, tables, or analysis decisions to preserve</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Safer sharing</h3>
+          <ul>
+            <li>Anonymized or public datasets are preferred for first projects</li>
+            <li>Only share data you are allowed to transfer for analysis</li>
+            <li>Clinical interpretation and patient-specific advice are excluded</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Burak Keskin</span>
+    <span>RNA-seq, splicing, visualization, and workflow automation.</span>
+  </footer>
+
+  <div class="image-modal" hidden>
+    <div class="image-modal-backdrop" data-close-modal></div>
+    <div class="image-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="image-modal-top">
+        <h2 id="modal-title">Result preview</h2>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close result preview">Close</button>
+      </div>
+      <img loading="lazy" src="" alt="">
+    </div>
+  </div>
+
+  <script src="../script.js?v=20261105"></script>
+</body>
+</html>

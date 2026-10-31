@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bioinformatikci.github.io/insights-from-biodata/</loc></url>
+  <url><loc>https://bioinformatikci.github.io/insights-from-biodata/services/</loc></url>
+  <url><loc>https://bioinformatikci.github.io/insights-from-biodata/portfolio/</loc></url>
+  <url><loc>https://bioinformatikci.github.io/insights-from-biodata/resources/</loc></url>
+  <url><loc>https://bioinformatikci.github.io/insights-from-biodata/process/</loc></url>
+  <url><loc>https://bioinformatikci.github.io/insights-from-biodata/about/</loc></url>
   <url><loc>https://bioinformatikci.github.io/insights-from-biodata/projects/synthetic-imat/index.html</loc></url>
 </urlset>

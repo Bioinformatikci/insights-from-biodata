@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build a project brief, preview what a delivery can include, and read common questions.">
+  <title>Project brief and resources | Insights From BioData</title>
+  <link rel="canonical" href="https://bioinformatikci.github.io/insights-from-biodata/resources/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Project brief and resources | Insights From BioData">
+  <meta property="og:description" content="Build a project brief, preview what a delivery can include, and read common questions.">
+  <meta property="og:url" content="https://bioinformatikci.github.io/insights-from-biodata/resources/">
+  <meta property="og:image" content="https://bioinformatikci.github.io/insights-from-biodata/assets/rna-seq-pca.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg?v=20260831" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20261105">
+</head>
+<body data-page="resources">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="Insights From BioData home">
+        <span class="brand-mark">IFB</span>
+        <span>Insights From BioData</span>
+      </a>
+
+      <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+
+      <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="../services/">Services</a>
+        <a href="../portfolio/">Portfolio</a>
+        <a href="../resources/" aria-current="page">Resources</a>
+        <a href="../process/">Process</a>
+        <a href="../about/">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-link" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button header-cta" href="#builder">Request a brief</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="builder section" id="builder">
+      <div class="builder-heading">
+        <div>
+          <h1 class="page-title">Build a project brief</h1>
+        </div>
+        <p>
+          Select the analysis blocks that match the dataset. The brief updates into a compact
+          handoff summary for discussion and platform-based project scoping.
+        </p>
+      </div>
+
+      <div class="builder-shell">
+        <form class="builder-options" aria-label="Project scope options">
+          <label class="scope-option">
+            <input type="checkbox" value="rna" checked>
+            <span>
+              <strong>RNA-seq DEG workflow</strong>
+              <small>counts, metadata, contrasts, DESeq2-style outputs</small>
+            </span>
+          </label>
+          <label class="scope-option">
+            <input type="checkbox" value="figures" checked>
+            <span>
+              <strong>Publication figures</strong>
+              <small>PCA, heatmap, volcano, pathway-ready graphics</small>
+            </span>
+          </label>
+          <label class="scope-option">
+            <input type="checkbox" value="splicing">
+            <span>
+              <strong>Alternative splicing</strong>
+              <small>rMATS event review and selected gene plots</small>
+            </span>
+          </label>
+          <label class="scope-option">
+            <input type="checkbox" value="pathway">
+            <span>
+              <strong>Pathway / GSEA review</strong>
+              <small>ranked gene lists, enrichment tables, pathway summaries</small>
+            </span>
+          </label>
+          <label class="scope-option">
+            <input type="checkbox" value="automation">
+            <span>
+              <strong>Reusable scripts</strong>
+              <small>Python/Bash helpers for repetitive analysis tasks</small>
+            </span>
+          </label>
+        </form>
+
+        <aside class="brief-card" aria-live="polite">
+          <div class="brief-top">
+            <span class="card-tag">Generated brief</span>
+            <strong data-scope-level>Focused analysis</strong>
+          </div>
+          <p data-scope-summary>RNA-seq differential expression with publication-ready figures.</p>
+          <div>
+            <h3>Expected deliverables</h3>
+            <ul data-deliverables></ul>
+          </div>
+          <div class="brief-meta">
+            <span><strong data-output-count>5</strong> output groups</span>
+            <span><strong data-review-depth>Standard</strong> review depth</span>
+          </div>
+          <div class="brief-actions">
+            <button class="button secondary brief-copy" type="button">Copy brief</button>
+            <a class="button secondary" href="mailto:burakkeskinin@gmail.com" data-email-brief>Email brief</a>
+          </div>
+          <p class="copy-status" aria-live="polite"></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="explorer section" id="explorer">
+      <div class="explorer-heading">
+        <div>
+          <h2>What a delivery can include</h2>
+        </div>
+        <p>
+          Switch between common request types to see the expected files, quality checks,
+          and researcher-facing outputs before a project begins. These are illustrative
+          examples, not measured results or guaranteed deliverables.
+        </p>
+      </div>
+
+      <div class="explorer-shell">
+        <div class="explorer-tabs" role="tablist" aria-label="Deliverable preview">
+          <button type="button" class="explorer-tab active" data-explorer-tab="rna">RNA-seq</button>
+          <button type="button" class="explorer-tab" data-explorer-tab="splicing">Splicing</button>
+          <button type="button" class="explorer-tab" data-explorer-tab="pathway">Pathway</button>
+          <button type="button" class="explorer-tab" data-explorer-tab="automation">Automation</button>
+        </div>
+
+        <div class="explorer-panel">
+          <div class="explorer-main">
+            <span class="card-tag" data-explorer-kicker>DESeq2-style workflow</span>
+            <h3 data-explorer-title>RNA-seq differential expression package</h3>
+            <p data-explorer-copy>
+              A focused comparison workflow with count filtering, metadata-aware design,
+              differential expression tables, and publication-ready plots.
+            </p>
+            <div class="artifact-list" data-explorer-artifacts></div>
+          </div>
+
+          <aside class="quality-panel">
+            <h3>Quality gates</h3>
+            <ul data-explorer-checks></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="section-heading">
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Can you work with public or anonymized datasets?</summary>
+          <p>Yes. Public, simulated, anonymized, or properly authorized research datasets are all fine to start with.</p>
+        </details>
+        <details>
+          <summary>What do I receive at the end?</summary>
+          <p>Typical delivery includes result tables, figure exports, reusable scripts or notebooks when appropriate, and a concise methods/result summary.</p>
+        </details>
+        <details>
+          <summary>Can you interpret clinical or patient-specific findings?</summary>
+          <p>No. The service is limited to research support, data analysis, visualization, and reproducible reporting. Clinical decisions are outside scope.</p>
+        </details>
+        <details>
+          <summary>What makes a project easier to scope?</summary>
+          <p>A clear sample sheet, group labels, contrast definition, organism/reference version, expected figures, and any previous analysis decisions.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Burak Keskin</span>
+    <span>RNA-seq, splicing, visualization, and workflow automation.</span>
+  </footer>
+
+  <div class="image-modal" hidden>
+    <div class="image-modal-backdrop" data-close-modal></div>
+    <div class="image-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="image-modal-top">
+        <h2 id="modal-title">Result preview</h2>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close result preview">Close</button>
+      </div>
+      <img loading="lazy" src="" alt="">
+    </div>
+  </div>
+
+  <script src="../script.js?v=20261105"></script>
+</body>
+</html>

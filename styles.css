@@ -2587,3 +2587,68 @@ button {
   }
 }
 
+/* Multi-page navigation and page titles. */
+.nav > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.nav > a:hover,
+.nav > a:focus-visible,
+.nav > a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.4vw, 3.15rem);
+  line-height: 1.08;
+}
+
+.section-more {
+  margin-top: 24px;
+  font-weight: 700;
+}
+
+.section-more a {
+  color: var(--teal-dark);
+}
+
+#home-services {
+  order: 40;
+}
+
+#home-work {
+  order: 60;
+}
+
+
+.contact .button.primary {
+  background: #fff;
+  border-color: #fff;
+  color: var(--teal-dark);
+}
+
+.contact .button.primary:hover {
+  background: var(--soft);
+  color: var(--teal-dark);
+}
+
+.faq-list {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+@media (max-width: 1100px) {
+  .site-header.nav-open .nav > a {
+    width: 100%;
+  }
+}

@@ -16,9 +16,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261104">
+  <link rel="stylesheet" href="styles.css?v=20261105">
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Insights From BioData home">
@@ -29,56 +29,16 @@
       <button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
 
       <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
-        <div class="nav-group">
-          <button class="nav-trigger" type="button" aria-expanded="false">Services</button>
-          <div class="nav-menu">
-            <a href="#services"><strong>RNA-seq analysis</strong><span>DEG tables, PCA, heatmaps, volcano plots</span></a>
-            <a href="#services"><strong>Alternative splicing</strong><span>rMATS event review</span></a>
-            <a href="#services"><strong>Pathway & GSEA</strong><span>Functional summaries and pathway interpretation</span></a>
-            <a href="#services"><strong>Automation</strong><span>Python/Bash helpers for repeatable work</span></a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-trigger" type="button" aria-expanded="false">Portfolio</button>
-          <div class="nav-menu">
-            <a href="#work"><strong>GitHub proof</strong><span>Open workflow repositories</span></a>
-            <a href="#results"><strong>Figure gallery</strong><span>RNA-seq and pathway-level outputs</span></a>
-            <a href="projects/synthetic-imat/index.html"><strong>iMAT results showcase</strong><span>Figures, matrices, and audited tables</span></a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-trigger" type="button" aria-expanded="false">Resources</button>
-          <div class="nav-menu">
-            <a href="#builder"><strong>Project brief builder</strong><span>Choose analysis blocks and outputs</span></a>
-            <a href="#explorer"><strong>Deliverable explorer</strong><span>Preview expected handoff items</span></a>
-            <a href="#faq"><strong>FAQ</strong><span>Scope, inputs, limits, and delivery</span></a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-trigger" type="button" aria-expanded="false">Process</button>
-          <div class="nav-menu">
-            <a href="#workflow"><strong>Process</strong><span>How a project moves from files to handoff</span></a>
-            <a href="#handoff"><strong>Project handoff</strong><span>Inputs that make analysis easier to scope</span></a>
-            <a href="#specs"><strong>Specifications</strong><span>Expected inputs, outputs, and boundaries</span></a>
-          </div>
-        </div>
-
-        <div class="nav-group">
-          <button class="nav-trigger" type="button" aria-expanded="false">About</button>
-          <div class="nav-menu">
-            <a href="#about"><strong>About</strong><span>Background and research focus</span></a>
-            <a href="#standards"><strong>Standards</strong><span>Research-support boundaries</span></a>
-            <a href="#contact"><strong>Contact</strong><span>Start by email or GitHub</span></a>
-          </div>
-        </div>
+        <a href="services/">Services</a>
+        <a href="portfolio/">Portfolio</a>
+        <a href="resources/">Resources</a>
+        <a href="process/">Process</a>
+        <a href="about/">About</a>
       </nav>
 
       <div class="header-actions">
         <a class="header-link" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="button header-cta" href="#builder">Request a brief</a>
+        <a class="button header-cta" href="resources/#builder">Request a brief</a>
       </div>
     </div>
   </header>
@@ -98,9 +58,9 @@
           clinical diagnosis or patient-level interpretation.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#builder">Request a project brief</a>
+          <a class="button primary" href="resources/#builder">Request a project brief</a>
           <a class="button secondary" href="https://github.com/Bioinformatikci/rna-seq-workflow" target="_blank" rel="noreferrer">See the RNA-seq example</a>
-          <a class="button secondary" href="#results">Browse figures</a>
+          <a class="button secondary" href="portfolio/#results">Browse figures</a>
         </div>
         <ul class="hero-lines" aria-label="Core service capabilities">
           <li>RNA-seq differential expression workflows with count filtering, QC summaries, DEG tables, PCA, heatmaps, and volcano plots</li>
@@ -145,17 +105,6 @@
       <a href="projects/synthetic-imat/index.html"><strong>13,070 reactions</strong><span>modeled per sample in a synthetic iMAT demo</span></a>
     </section>
 
-    <section class="section intro-band about" id="about">
-      <div class="intro-text">
-        <h2>About</h2>
-      </div>
-      <p>
-        I am Burak Keskin, an MSc student in Bioinformatics and Systems Biology at Gebze Technical University.
-        My research combines RNA splicing analysis and genome-scale metabolic modeling in Alzheimer's disease.
-        I build reproducible RNA-seq and splicing workflows, and I deliver clean figures and clear methods notes.
-      </p>
-    </section>
-
     <section class="trust-strip" aria-label="Service highlights">
       <article>
         <h3>Research-ready inputs</h3>
@@ -182,7 +131,7 @@
       </p>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="home-services">
       <div class="section-heading">
         <h2>What I offer</h2>
       </div>
@@ -209,168 +158,15 @@
         </article>
       </div>
       <p class="service-extra">Also available: small Python/Bash helpers for repetitive lab data tasks.</p>
+      <p class="section-more"><a href="services/#services">See services and packages</a></p>
     </section>
 
-    <section class="packages section" id="packages">
-      <div class="section-heading">
-        <h2>Project packages</h2>
-      </div>
-      <div class="package-grid">
-        <article class="package-card">
-          <span class="card-tag">Starter</span>
-          <h3>Figure Cleanup</h3>
-          <p class="package-time">Typical time: 2-3 days.</p>
-          <p>Best for teams that already have tables and need polished scientific figures.</p>
-          <ul>
-            <li>PCA, heatmap, volcano, or pathway figure</li>
-            <li>Clean labels, legends, and export formats</li>
-            <li>Short figure note for methods/report use</li>
-          </ul>
-        </article>
-        <article class="package-card highlighted">
-          <span class="card-tag">Core</span>
-          <h3>RNA-seq Result Pack</h3>
-          <p class="package-time">Typical time: 5-7 days.</p>
-          <p>Best for a focused differential expression comparison with reusable outputs.</p>
-          <ul>
-            <li>QC-aware DEG workflow and result tables</li>
-            <li>PCA, heatmap, volcano, and selected summaries</li>
-            <li>Concise methods and interpretation report</li>
-          </ul>
-        </article>
-        <article class="package-card">
-          <span class="card-tag">Advanced</span>
-          <h3>Splicing / Pathway Review</h3>
-          <p class="package-time">Time depends on scope.</p>
-          <p>Best for deeper review around events, genes, pathways, or selected biology.</p>
-          <ul>
-            <li>rMATS-style event filtering</li>
-            <li>Selected sashimi or pathway-level visuals</li>
-            <li>Structured handoff of tables and scripts</li>
-          </ul>
-        </article>
-      </div>
-      <p class="package-pricing">Pricing depends on dataset size and scope. Send a brief to get a quote.</p>
-    </section>
-
-    <section class="builder section" id="builder">
-      <div class="builder-heading">
-        <div>
-          <h2>Build a project brief</h2>
-        </div>
-        <p>
-          Select the analysis blocks that match the dataset. The brief updates into a compact
-          handoff summary for discussion and platform-based project scoping.
-        </p>
-      </div>
-
-      <div class="builder-shell">
-        <form class="builder-options" aria-label="Project scope options">
-          <label class="scope-option">
-            <input type="checkbox" value="rna" checked>
-            <span>
-              <strong>RNA-seq DEG workflow</strong>
-              <small>counts, metadata, contrasts, DESeq2-style outputs</small>
-            </span>
-          </label>
-          <label class="scope-option">
-            <input type="checkbox" value="figures" checked>
-            <span>
-              <strong>Publication figures</strong>
-              <small>PCA, heatmap, volcano, pathway-ready graphics</small>
-            </span>
-          </label>
-          <label class="scope-option">
-            <input type="checkbox" value="splicing">
-            <span>
-              <strong>Alternative splicing</strong>
-              <small>rMATS event review and selected gene plots</small>
-            </span>
-          </label>
-          <label class="scope-option">
-            <input type="checkbox" value="pathway">
-            <span>
-              <strong>Pathway / GSEA review</strong>
-              <small>ranked gene lists, enrichment tables, pathway summaries</small>
-            </span>
-          </label>
-          <label class="scope-option">
-            <input type="checkbox" value="automation">
-            <span>
-              <strong>Reusable scripts</strong>
-              <small>Python/Bash helpers for repetitive analysis tasks</small>
-            </span>
-          </label>
-        </form>
-
-        <aside class="brief-card" aria-live="polite">
-          <div class="brief-top">
-            <span class="card-tag">Generated brief</span>
-            <strong data-scope-level>Focused analysis</strong>
-          </div>
-          <p data-scope-summary>RNA-seq differential expression with publication-ready figures.</p>
-          <div>
-            <h3>Expected deliverables</h3>
-            <ul data-deliverables></ul>
-          </div>
-          <div class="brief-meta">
-            <span><strong data-output-count>5</strong> output groups</span>
-            <span><strong data-review-depth>Standard</strong> review depth</span>
-          </div>
-          <div class="brief-actions">
-            <button class="button secondary brief-copy" type="button">Copy brief</button>
-            <a class="button secondary" href="mailto:burakkeskinin@gmail.com" data-email-brief>Email brief</a>
-          </div>
-          <p class="copy-status" aria-live="polite"></p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="explorer section" id="explorer">
-      <div class="explorer-heading">
-        <div>
-          <h2>What a delivery can include</h2>
-        </div>
-        <p>
-          Switch between common request types to see the expected files, quality checks,
-          and researcher-facing outputs before a project begins. These are illustrative
-          examples, not measured results or guaranteed deliverables.
-        </p>
-      </div>
-
-      <div class="explorer-shell">
-        <div class="explorer-tabs" role="tablist" aria-label="Deliverable preview">
-          <button type="button" class="explorer-tab active" data-explorer-tab="rna">RNA-seq</button>
-          <button type="button" class="explorer-tab" data-explorer-tab="splicing">Splicing</button>
-          <button type="button" class="explorer-tab" data-explorer-tab="pathway">Pathway</button>
-          <button type="button" class="explorer-tab" data-explorer-tab="automation">Automation</button>
-        </div>
-
-        <div class="explorer-panel">
-          <div class="explorer-main">
-            <span class="card-tag" data-explorer-kicker>DESeq2-style workflow</span>
-            <h3 data-explorer-title>RNA-seq differential expression package</h3>
-            <p data-explorer-copy>
-              A focused comparison workflow with count filtering, metadata-aware design,
-              differential expression tables, and publication-ready plots.
-            </p>
-            <div class="artifact-list" data-explorer-artifacts></div>
-          </div>
-
-          <aside class="quality-panel">
-            <h3>Quality gates</h3>
-            <ul data-explorer-checks></ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="work section" id="work">
+    <section class="work section" id="home-work">
       <div class="section-heading">
         <h2>Selected work</h2>
       </div>
       <div class="work-grid">
-        <article class="work-card wide">
+        <article class="work-card">
           <div>
             <span class="card-tag">R / DESeq2</span>
             <h3>RNA-seq Workflow</h3>
@@ -392,333 +188,13 @@
           <a href="https://github.com/Bioinformatikci/rmats-ad-skipped-exon-analysis" target="_blank" rel="noreferrer">Open repository</a>
         </article>
         <article class="work-card">
-          <span class="card-tag">Python / MATLAB</span>
-          <h3>GEMsplice HumanGEM Alzheimer Analysis</h3>
-          <p>Curated Alzheimer/control workflow integrating Salmon quantification outputs, Human-GEM resources, GEMsplice/iMAT-style scripts, summary tables, figures, and final report structure.</p>
-          <a href="https://github.com/Bioinformatikci/gemsplice-humangem-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
-        </article>
-        <article class="work-card">
-          <span class="card-tag">Python / Gurobi</span>
-          <h3>Human-GEM GIMME Alzheimer Analysis</h3>
-          <p>Context-specific AD and control models from Salmon quantification outputs, with precomputed results, QC reports, and figures.</p>
-          <a href="https://github.com/Bioinformatikci/humangem-gimme-alzheimer-analysis" target="_blank" rel="noreferrer">Open repository</a>
-        </article>
-        <article class="work-card">
-          <span class="card-tag">Python / R / Human-GEM</span>
-          <h3>Synthetic splicing and pathogenicity iMAT showcase</h3>
-          <p>Three computed iMAT layers for 200 artificial samples, with downloadable matrices, statistics tables, and input audits.</p>
-          <a href="projects/synthetic-imat/index.html">Open the results showcase</a>
-        </article>
-        <article class="work-card">
           <span class="card-tag">Python / Human-GEM</span>
           <h3>iMAT Tool</h3>
           <p>Interactive terminal tool for per-sample Human-GEM iMAT, Fisher and reporter-like analysis, and optional gene zeroing, with a synthetic demo.</p>
           <a href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects/tree/main/imat-tool" target="_blank" rel="noreferrer">Open project</a>
         </article>
-        <article class="work-card span-two">
-          <span class="card-tag">Python / Shiny</span>
-          <h3>Bioinformatics Portfolio Projects</h3>
-          <p>Sequence alignment, FASTA utilities, motif search, volcano plotting, variant summaries, and interactive R/Shiny exploration examples.</p>
-          <a href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects" target="_blank" rel="noreferrer">Open repository</a>
-        </article>
       </div>
-    </section>
-
-    <section class="featured-study section" id="featured-study" aria-labelledby="featured-study-title">
-      <div class="featured-study-copy">
-        <p class="eyebrow">Synthetic data, computed with Gurobi</p>
-        <h2 id="featured-study-title">Three-stage iMAT demo on synthetic data</h2>
-        <p>Follow 200 artificial samples through Human-GEM 1.12.0, COBAMP reaction scoring, TROPPO iMAT with Gurobi, and Fisher plus reporter-like statistics. The showcase includes all three reaction matrices, four vector figures, and the checks behind them.</p>
-        <ul class="analysis-includes">
-            <li>Three 13,070 × 200 reaction activity matrices</li>
-            <li>Matched model-size and reaction-overlap checks</li>
-            <li>Four inspectable vector figures</li>
-            <li>Fisher and reporter-like result tables</li>
-            <li>Documented synthetic inputs and reproducible scripts</li>
-          </ul>
-        <p class="featured-study-note">A reproducible methods demonstration using synthetic inputs. No biological or clinical conclusion is drawn from these figures.</p>
-        <div class="featured-study-actions">
-          <a class="button primary" href="projects/synthetic-imat/index.html">Open results and figures</a>
-          <a class="button secondary" href="https://github.com/Bioinformatikci/bioinformatics-portfolio-projects/tree/main/splicing-pathogenicity-imat-demo" target="_blank" rel="noreferrer">Explore code and inputs</a>
-        </div>
-      </div>
-      <a class="featured-study-visual" href="projects/synthetic-imat/index.html" aria-label="Open the synthetic iMAT results showcase">
-        <img src="projects/synthetic-imat/figures/active_reactions.svg" alt="Active reaction counts across controls and three synthetic AD-labelled iMAT stages" loading="lazy">
-        <span>100 samples per group or stage</span>
-      </a>
-    </section>
-
-    
-
-    <section class="results section" id="results">
-      <div class="section-heading">
-        <h2>Example results</h2>
-      </div>
-      <div class="results-grid">
-        <article class="result-card main-result">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-volcano.png" data-title="RNA-seq volcano plot">
-            <img loading="lazy" src="assets/rna-seq-volcano.png" alt="Volcano plot from the RNA-seq workflow portfolio repository">
-          </button>
-          <div>
-            <span class="card-tag">RNA-seq workflow</span>
-            <h3>Differential expression volcano plot</h3>
-            <p>Portfolio figure showing differential expression signal across genes, prepared as part of a reproducible RNA-seq workflow.</p>
-            <p class="figure-source">Example output from public dataset.</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-sample-distance-heatmap.png" data-title="Sample distance heatmap">
-            <img loading="lazy" src="assets/rna-seq-sample-distance-heatmap.png" alt="Sample distance heatmap from the RNA-seq workflow portfolio repository">
-          </button>
-          <div>
-            <span class="card-tag">RNA-seq QC</span>
-            <h3>Sample distance heatmap</h3>
-            <p>Quality-control style output for reviewing sample relationships before interpretation.</p>
-            <p class="figure-source">Example output from public dataset.</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/rna-seq-top-deg-heatmap.png" data-title="Top DEG heatmap">
-            <img loading="lazy" src="assets/rna-seq-top-deg-heatmap.png" alt="Top differentially expressed gene heatmap from the RNA-seq workflow portfolio repository">
-          </button>
-          <div>
-            <span class="card-tag">RNA-seq figures</span>
-            <h3>Top DEG heatmap</h3>
-            <p>Expression-pattern figure prepared for selected differentially expressed genes.</p>
-            <p class="figure-source">Example output from public dataset.</p>
-          </div>
-        </article>
-        <article class="result-card main-result">
-          <button class="result-image-button" type="button" data-image="assets/pathway-flux-imat-optimized.png" data-title="Pathway-level relative flux change">
-            <img loading="lazy" src="assets/pathway-flux-imat-optimized.png" alt="Pathway-level relative flux change scatter plot from GEMsplice-iMAT HumanGEM analysis">
-          </button>
-          <div>
-            <span class="card-tag">GEMsplice / iMAT</span>
-            <h3>Pathway-level relative flux change</h3>
-            <p>Advanced portfolio output comparing Alzheimer and control groups across pathway-level metabolic flux changes.</p>
-            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="assets/objective-projections-optimized.png" data-title="Pairwise objective review">
-            <img loading="lazy" src="assets/objective-projections-optimized.png" alt="Pairwise objective projection plots comparing Alzheimer and control samples">
-          </button>
-          <div>
-            <span class="card-tag">Objective projections</span>
-            <h3>Pairwise objective review</h3>
-            <p>Projection panels showing how sample groups separate across selected metabolic objective values.</p>
-            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
-          </div>
-        </article>
-        <article class="result-card main-result">
-          <button class="result-image-button" type="button" data-image="assets/pathway-flux-tx2gene-optimized.png" data-title="Curated pathway scatter">
-            <img loading="lazy" src="assets/pathway-flux-tx2gene-optimized.png" alt="HumanGEM tx2gene pathway-level relative flux change scatter plot">
-          </button>
-          <div>
-            <span class="card-tag">HumanGEM tx2gene</span>
-            <h3>Curated pathway scatter</h3>
-            <p>Pathway-level scatter plot from the HumanGEM tx2gene analysis.</p>
-            <p class="figure-source">Public RNA-seq source: <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA670209">PRJNA670209</a> (SRR12850842, SRR12850850–54; 3 AD, 3 control samples).</p>
-          </div>
-        </article>
-        <article class="result-card main-result">
-          <button class="result-image-button" type="button" data-image="projects/synthetic-imat/figures/active_reactions.svg" data-title="Reaction activity across staged iMAT inputs" aria-label="Enlarge active reaction count plot">
-            <img src="projects/synthetic-imat/figures/active_reactions.svg" alt="Active reaction counts for controls and three synthetic AD-labelled iMAT stages" loading="lazy">
-          </button>
-          <div>
-            <span class="card-tag">Featured synthetic iMAT run</span>
-            <h3>Reaction activity across three model stages</h3>
-            <p>All 100 samples in each group or stage are shown. The same control vectors are used throughout the staged comparison.</p>
-            <p class="figure-source">Synthetic-data methods demonstration. <a href="projects/synthetic-imat/index.html">Open full results and downloads</a>.</p>
-          </div>
-        </article>
-        <article class="result-card">
-          <button class="result-image-button" type="button" data-image="projects/synthetic-imat/figures/paired_model_size.svg" data-title="Paired iMAT model-size change" aria-label="Enlarge paired model-size change plot">
-            <img src="projects/synthetic-imat/figures/paired_model_size.svg" alt="Paired active reaction count changes across synthetic iMAT stages" loading="lazy">
-          </button>
-          <div>
-            <span class="card-tag">Paired model comparison</span>
-            <h3>Model-size changes by sample</h3>
-            <p>Each artificial AD-labelled sample is paired with its own splicing and rank-adjusted model.</p>
-            <p class="figure-source">Synthetic-data methods demonstration; no disease inference.</p>
-          </div>
-        </article>
-      </div>
-      <p class="results-note">
-        Portfolio outputs are shown for research-support demonstration only. Clinical diagnosis,
-        treatment decisions, and patient-specific interpretation are outside the service scope.
-      </p>
-    </section>
-
-    <section class="standards section" id="standards">
-      <div class="standards-heading">
-        <div>
-          <h2>What to expect from a delivery</h2>
-        </div>
-        <p>
-          Clear outputs and a traceable analysis trail for each project.
-        </p>
-      </div>
-      <div class="standards-grid">
-        <article>
-          <h3>Publication-ready figures</h3>
-          <p>Plots are made for manuscripts and reports, with clean labels and export formats.</p>
-        </article>
-        <article>
-          <h3>Downloadable files</h3>
-          <p>Deliverables typically include tables, figures, scripts, and method notes you can reuse.</p>
-        </article>
-        <article>
-          <h3>Reproducible analysis trail</h3>
-          <p>Inputs, contrasts, filtering choices, and output names are made explicit before delivery.</p>
-        </article>
-        <article>
-          <h3>Research-only boundary</h3>
-          <p>Clinical diagnosis, treatment decisions, and patient-specific interpretation remain out of scope.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="specs section" id="specs">
-      <div class="section-heading">
-        <h2>Inputs, analyses, and deliverables</h2>
-      </div>
-      <div class="spec-table" role="table" aria-label="Technical specifications">
-        <div role="row">
-          <strong role="cell">Accepted inputs</strong>
-          <span role="cell">Count matrix, normalized matrix, Salmon/quantification summaries, metadata, selected public datasets</span>
-        </div>
-        <div role="row">
-          <strong role="cell">Core analyses</strong>
-          <span role="cell">Differential expression, PCA/heatmap/volcano, pathway/GSEA review, alternative splicing event summaries</span>
-        </div>
-        <div role="row">
-          <strong role="cell">Visualization</strong>
-          <span role="cell">Publication-ready static figures with clean labels, legends, dimensions, and export formats</span>
-        </div>
-        <div role="row">
-          <strong role="cell">Statistical notes</strong>
-          <span role="cell">Contrast definition, filtering assumptions, adjusted p-values, ranked lists, and method limitations</span>
-        </div>
-        <div role="row">
-          <strong role="cell">Deliverables</strong>
-          <span role="cell">Tables, figures, scripts/notebooks when appropriate, and a concise report or methods summary</span>
-        </div>
-        <div role="row">
-          <strong role="cell">Scope boundary</strong>
-          <span role="cell">Research support only; no diagnosis, treatment guidance, or patient-specific medical interpretation</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="workflow" id="workflow">
-      <div class="section-heading">
-        <h2>How a project works</h2>
-      </div>
-      <ol class="steps">
-        <li>
-          <span>01</span>
-          <h3>Scope the dataset</h3>
-          <p>Clarify organism, sample groups, metadata, contrast, desired figures, and what data can be shared safely.</p>
-        </li>
-        <li>
-          <span>02</span>
-          <h3>Run the workflow</h3>
-          <p>Analyze with transparent scripts, named outputs, quality checks, and checkpoints that make the result traceable.</p>
-        </li>
-        <li>
-          <span>03</span>
-          <h3>Deliver clean files</h3>
-          <p>Provide tables, plots, scripts, and a short report that explains what was done and what the results show.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="stack section" id="stack">
-      <div>
-        <h2>Tools I use</h2>
-      </div>
-      <div class="stack-cloud" aria-label="Technical tools">
-        <span>R</span>
-        <span>Python</span>
-        <span>Bash</span>
-        <span>DESeq2</span>
-        <span>Salmon</span>
-        <span>STAR</span>
-        <span>rMATS</span>
-        <span>ggplot2</span>
-        <span>pheatmap</span>
-        <span>pandas</span>
-        <span>NumPy</span>
-        <span>SciPy</span>
-        <span>Shiny</span>
-        <span>Git</span>
-        <span>Linux</span>
-      </div>
-    </section>
-
-    <section class="handoff section" id="handoff">
-      <div class="section-heading">
-        <h2>What makes a dataset ready for analysis</h2>
-      </div>
-      <div class="handoff-grid">
-        <article>
-          <h3>Minimum inputs</h3>
-          <ul>
-            <li>Raw count matrix or accepted quantification outputs</li>
-            <li>Sample metadata with groups, batches, and contrasts</li>
-            <li>Organism, genome/reference version, and gene annotation notes</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Useful context</h3>
-          <ul>
-            <li>Target genes, pathways, or splicing events of interest</li>
-            <li>Required figure formats for thesis, report, or manuscript use</li>
-            <li>Any previous scripts, tables, or analysis decisions to preserve</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Safer sharing</h3>
-          <ul>
-            <li>Anonymized or public datasets are preferred for first projects</li>
-            <li>Only share data you are allowed to transfer for analysis</li>
-            <li>Clinical interpretation and patient-specific advice are excluded</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="faq section" id="faq">
-      <div class="section-heading">
-        <h2>Frequently asked questions</h2>
-      </div>
-      <div class="faq-list">
-        <details>
-          <summary>Can you work with public or anonymized datasets?</summary>
-          <p>Yes. Public, simulated, anonymized, or properly authorized research datasets are all fine to start with.</p>
-        </details>
-        <details>
-          <summary>What do I receive at the end?</summary>
-          <p>Typical delivery includes result tables, figure exports, reusable scripts or notebooks when appropriate, and a concise methods/result summary.</p>
-        </details>
-        <details>
-          <summary>Can you interpret clinical or patient-specific findings?</summary>
-          <p>No. The service is limited to research support, data analysis, visualization, and reproducible reporting. Clinical decisions are outside scope.</p>
-        </details>
-        <details>
-          <summary>What makes a project easier to scope?</summary>
-          <p>A clear sample sheet, group labels, contrast definition, organism/reference version, expected figures, and any previous analysis decisions.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="notice">
-      <h2>Research use first</h2>
-      <p>
-        Services are positioned for research support, data analysis, visualization, and reproducible reporting.
-        Clinical diagnosis, treatment decisions, or patient-specific medical interpretation are outside the scope.
-      </p>
+      <p class="section-more"><a href="portfolio/#work">See all work</a></p>
     </section>
 
     <section class="contact" id="contact">
@@ -735,7 +211,7 @@
       <div class="contact-actions">
         <a class="button primary" href="mailto:burakkeskinin@gmail.com?subject=Project%20brief">Email your brief</a>
         <a class="button secondary" href="https://github.com/Bioinformatikci" target="_blank" rel="noreferrer">View GitHub profile</a>
-        <a class="button secondary" href="#handoff">Check project inputs</a>
+        <a class="button secondary" href="process/#handoff">Check project inputs</a>
       </div>
     </section>
   </main>
@@ -756,6 +232,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20261104"></script>
+  <script src="script.js?v=20261105"></script>
 </body>
 </html>

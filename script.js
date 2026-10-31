@@ -218,7 +218,7 @@ function getBriefText() {
 }
 
 function getPublicEmail() {
-  const href = document.querySelector("#contact-email")?.getAttribute("href") || "";
+  const href = document.querySelector("#contact-email, [data-email-brief]")?.getAttribute("href") || "";
   if (!href.startsWith("mailto:")) return "";
 
   const address = href.slice("mailto:".length).split("?")[0];
@@ -339,3 +339,16 @@ if (resultsGrid) {
   showCard(cards[0]);
 }
 
+// Older links to sections of the single page keep working.
+const movedSections = {
+  services: "services", packages: "services", standards: "services",
+  work: "portfolio", "featured-study": "portfolio", results: "portfolio", report: "portfolio",
+  builder: "resources", explorer: "resources", faq: "resources",
+  workflow: "process", specs: "process", handoff: "process",
+  about: "about", stack: "about",
+};
+const movedSection = location.hash.slice(1);
+
+if (document.body.dataset.page === "home" && movedSections[movedSection] && !document.getElementById(movedSection)) {
+  location.replace(`${movedSections[movedSection]}/#${movedSection}`);
+}

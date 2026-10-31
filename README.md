@@ -1,6 +1,6 @@
 # Insights From BioData
 
-A static, single-page bioinformatics portfolio. The page presents research-support services, links to project repositories, and displays example RNA-seq and pathway figures. It includes an interactive project-brief builder, a deliverable explorer, and a gallery with larger image previews. The deliverable explorer shows illustrative examples; its files and checks are not measured project results or guaranteed outputs.
+A static, multi-page bioinformatics portfolio. The page presents research-support services, links to project repositories, and displays example RNA-seq and pathway figures. It includes an interactive project-brief builder, a deliverable explorer, and a gallery with larger image previews. The deliverable explorer shows illustrative examples; its files and checks are not measured project results or guaranteed outputs.
 
 ## View and preview
 
@@ -16,7 +16,8 @@ Then open <http://localhost:8000/>. The site is plain HTML, CSS, and JavaScript;
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Page structure, text, and links |
+| `index.html` | Home page |
+| `services/`, `portfolio/`, `resources/`, `process/`, `about/` | One page each, sharing the same header and footer |
 | `styles.css` | Responsive layout and visual styling |
 | `script.js` | Navigation, project-brief builder, deliverable explorer, and image preview interactions |
 | `assets/` | Example figures, favicon, and a sample PDF report |
