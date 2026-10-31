@@ -98,13 +98,6 @@ const explorerData = {
   },
 };
 
-if (header) {
-  window.addEventListener("scroll", () => {
-    const hasScrolled = window.scrollY > 12;
-    header.style.boxShadow = hasScrolled ? "0 10px 30px rgba(24, 32, 31, 0.08)" : "none";
-  });
-}
-
 function setNavigationOpen(isOpen) {
   if (!header) return;
 
@@ -288,7 +281,9 @@ function updateExplorer(tabName) {
   explorerChecks.innerHTML = data.checks.map((check) => `<li>${check}</li>`).join("");
 
   explorerTabs.forEach((tab) => {
-    tab.classList.toggle("active", tab.dataset.explorerTab === tabName);
+    const isActive = tab.dataset.explorerTab === tabName;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
   });
 }
 
@@ -297,3 +292,30 @@ explorerTabs.forEach((tab) => {
 });
 
 updateExplorer("rna");
+
+document.querySelectorAll(".sheet .frame").forEach((frame, index) => {
+  frame.style.setProperty("--i", String(index % 8));
+});
+
+document.querySelectorAll("#primary-navigation a").forEach((link) => {
+  link.addEventListener("click", () => setNavigationOpen(false));
+});
+
+if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const targets = document.querySelectorAll(
+    "main section:not(.sheet) h2, main section:not(.sheet) h3, main section:not(.sheet) p, .strip, .volcano, .brief-card, .scope-option",
+  );
+  document.documentElement.classList.add("motion-ready");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -6% 0px" });
+  targets.forEach((target) => {
+    target.classList.add("reveal");
+    observer.observe(target);
+  });
+}
