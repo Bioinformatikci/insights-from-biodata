@@ -18,8 +18,7 @@ Then open <http://localhost:8000/>. The site is plain HTML, CSS, and JavaScript;
 | --- | --- |
 | `index.html` | Page structure, text, and links |
 | `styles.css` | Responsive layout and visual styling |
-| `script.js` | Navigation, project-brief builder, delivery examples, and image preview interactions |
-| `volcano.js`, `assets/airway-deg.json` | Interactive volcano plot built from the published DESeq2 table |
+| `script.js` | Navigation, project-brief builder, deliverable explorer, and image preview interactions |
 | `assets/` | Example figures, favicon, and a sample PDF report |
 | `projects/synthetic-imat/` | Synthetic iMAT results page with downloadable tables |
 | `robots.txt`, `sitemap.xml` | Search-engine files for the published site |
